@@ -2,11 +2,30 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Aprendiendo HTML - Clase 01</title>
+		<title>Aprendiendo HTML - Clase 03</title>
+		<link href="css/style.css" rel="stylesheet">
+		<style>
+			h1 {
+				font-size: 6em !important; /* <-- Predomina por sobre los demas */
+				color: #A4A4A4;
+			}
+		</style>
 	</head>
 	<body>
-		<h1 style="font-size: 3em;color: #941d94;">Mi primera página web</h1>
-		<p>Aprendiendo los conceptos básicos</p>
+		<!-- Esto es un comentario en HTML -->
+		<h1 onclick="saludar()" style="font-size: 3em;color: #941d94;">Mi primera página web</h1>
+		<!-- <p>Aprendiendo los conceptos básicos</p> -->
+		
+		<!--
+		<script src="js/main.js"></script>
+		-->
 
+		<script>
+			function saludar(){ //<--- Operacion logica
+				window.alert("Hola desde un atributo onclick")
+			}
+
+			//document.querySelector("h1").onclick = saludar; //<-- Evento/Comportamiento...
+		</script>
 	</body>
 </html>
