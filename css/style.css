@@ -1,17 +1,10 @@
-/* Esto es un comentario en CSS */
-
-/*
-- Anatomia de una regla CSS:
-
-selector {
-	propiedad: valor;
-	propiedad: valor;
-	propiedad: valor;
+body {
+	font-family: Arial;
+	color: #333333;
+	margin: 0;
+	font-size: 20px;	
 }
-*/
-
-/* Regla CSS */
 h1 {
-	font-size: 4em;
-	color: #C1C1C1;
+	font-size: 24px;
+	margin: 0;
 }
