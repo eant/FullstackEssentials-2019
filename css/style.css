@@ -22,6 +22,7 @@ a:hover {
 	align-items: center; /* Eje X */
 	justify-content: flex-start; /* Eje Y */
 	padding: 10px;
+	border-bottom: solid 1px #FFFFFF;
 }
 #menu {
 	list-style: none;
@@ -51,4 +52,23 @@ li {
 #menu li a:hover {
 	color: #FFFFFF;
 	background-color: #AAAAAA;
+}
+#content figure {
+	margin: 0;
+}
+#content figure figcaption {
+	background-color: #212121;
+	padding: 10px;
+}
+#content figure figcaption h2 {
+	color: #FFF;
+	margin: 0;
+	font-size: 36px;
+}
+#content img {
+	display: block;
+	width: 100%;
+}
+.noticia {
+	border-bottom: solid 1px #CCCCCC;
 }
