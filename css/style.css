@@ -8,6 +8,11 @@ h1 {
 	font-size: 24px;
 	margin: 0;
 }
+/*
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+*/
 a {
 	text-decoration: none;
 	color: #CCCCCC;
@@ -15,8 +20,14 @@ a {
 a:hover {
 	color: #FFFFFF;
 }
-#top {
+
+#top,
+#content figcaption,
+#copyright {
 	background-color: #212121;
+}
+
+#top {
 	display: flex;
 	flex-direction: row;
 	align-items: center; /* Eje X */
@@ -57,7 +68,6 @@ li {
 	margin: 0;
 }
 #content figure figcaption {
-	background-color: #212121;
 	padding: 10px;
 }
 #content figure figcaption h2 {
@@ -71,4 +81,26 @@ li {
 }
 .noticia {
 	border-bottom: solid 1px #CCCCCC;
+	display: flex;
+	margin: 0 10px;
+	padding: 10px 0;
+}
+.noticia-img, .noticia-txt {
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+.noticia-img {
+	width: 30%;
+}
+.noticia-txt {
+	width: 70%;
+}
+#ultimasNoticias .noticia:last-child {
+	border: none;
+}
+#copyright p {
+	margin: 0;
+	padding: 10px;
+	color: #FFF;
+	text-align: center;
 }
