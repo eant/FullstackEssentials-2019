@@ -35,6 +35,9 @@ a:hover {
 	padding: 10px;
 	border-bottom: solid 1px #FFFFFF;
 }
+#top button {
+	display: none;
+}
 #menu {
 	list-style: none;
 	padding: 0;
@@ -129,4 +132,35 @@ li {
 }
 #tablaPosiciones table td:nth-of-type(even) span { /* ◄ Pares */
 	color: green;
+}
+/* Ajustes Mobile */
+@media screen and (max-width: 480px) {
+	#top {
+		flex-wrap: wrap;
+	}
+	#menu {
+		display: none;
+		margin: auto;
+		width: 100%;
+		background-color: #212121;
+		position: absolute;
+		left: 0;
+		top: 52px;
+		z-index: 9999;
+	}
+	#top button {
+		display: block;
+		border: none;
+		background-color: transparent;
+		color: #CCCCCC;
+		font-size: 24px;
+		font-weight: 600;
+		margin-left: auto;
+	}
+	#top button:focus + #menu {
+		display: block;
+	}
+	#menu li {
+		float: none;
+	}
 }
