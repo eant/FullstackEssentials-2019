@@ -11,8 +11,12 @@ a {
 a:hover {
 	color: #FFFFFF;
 }
-#top {
+#top,
+#content figcaption,
+#copyright {
 	background-color: #333333;
+}
+#top {
 	padding: 10px;
 	/* Flexbox */
 	display: flex;
@@ -48,7 +52,6 @@ a:hover {
 	margin: 0;
 }
 #content figcaption {
-	background-color: #333333;
 	padding: 15px;
 }
 #content h2 {
@@ -75,7 +78,7 @@ a:hover {
 .noticia-text {
 	float: left;
 	padding: 10px;
-	box-sizing: border-box; /* content-box | border-box */ 
+	box-sizing: border-box; /* content-box | border-box */
 }
 .noticia-img {
 	width: 30%;
@@ -86,4 +89,32 @@ a:hover {
 .noticia-text h3 {
 	margin: 10px 0;
 	font-size: 32px;  
+}
+#tabla-posiciones table {
+	border: solid 1px #CCCCCC;
+	border-collapse: collapse;
+	margin: auto;
+	width: 600px;
+}
+#tabla-posiciones tr {
+	border-bottom: solid 1px #CCCCCC;
+}
+#tabla-posiciones td,
+#tabla-posiciones th {
+	padding: 10px;
+}
+#tabla-posiciones td:nth-of-type(odd) {
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+}
+#tabla-posiciones td strong {
+	color: green
+}
+#copyright p {
+	color: #FFFFFF;
+	margin: 0;
+	padding: 15px;
+	text-align: center;
+	font-size: 14px;
 }
