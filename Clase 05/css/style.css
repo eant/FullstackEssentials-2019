@@ -63,4 +63,27 @@ a:hover {
 .noticia {
 	padding: 10px;
 	border-bottom: solid 1px #CCCCCC;
+	overflow: hidden;
+	/*
+	margin-left: 15px;
+	margin-right: 15px;
+	margin: 0 15px 0 15px;
+	*/
+	margin: 0 10px;
+}
+.noticia-img,
+.noticia-text {
+	float: left;
+	padding: 10px;
+	box-sizing: border-box; /* content-box | border-box */ 
+}
+.noticia-img {
+	width: 30%;
+}
+.noticia-text {
+	width: 70%;
+}
+.noticia-text h3 {
+	margin: 10px 0;
+	font-size: 32px;  
 }
