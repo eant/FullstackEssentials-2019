@@ -1,151 +1,34 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
+		<!-- Required meta tags -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>DX - DeporteXtremo</title>
-		<link href="css/style.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Aprendiendo Bootstrap</title>
+		<style>
+			#productos { background-color: orange }
+			#servicios { background-color: pink }
+			#ofertas { background-color: lightblue }
+			#noticias { background-color: lightgreen }
+			#articulos { background-color: violet }
+		</style>
 	</head>
 	<body>
-		<!-- ENCABEZADO -->
-		<header id="top">
-
-			<a href="https://twitter.com/eanttech" target="_blank"><img src="img/logo.png" width="50"></a>
-
-			<h1>
-				<a href="index.html">DeporteXtremo</a>
-			</h1>
-			<button>
-				&#9776;
-			</button>
-			<ul id="menu">
-				<li>
-					<a href="#">Futbol</a>
-				</li>
-				<li><a href="#">NBA</a></li>
-				<li><a href="#">Tenis</a></li>
-				<li><a href="#">Formula 1</a></li>
-				<li><a href="#">Boxeo</a></li>
-				<li><a href="#">JJOO</a></li>
-				<li><a href="#">Moto GP</a></li>
-			</ul>
-		</header>
-		
-		<!-- CUERPO -->
-		<main id="content">
-			<!-- NOTICIA DESTACADA -->
-			<section id="noticiasDestacadas">
-				<figure>
-					<a href="#">
-						<img src="img/juegos-olimpicos.jpg" alt="Juegos Olimpicos">
-						<figcaption>
-							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-						</figcaption>
-					</a>
-				</figure>
-			</section>
-			<!-- ULTIMAS NOTICIAS -->
-			<section id="ultimasNoticias">
-				<article class="noticia">
-					<div class="noticia-img">
-						<img src="img/sorteo-libertadores.jpg">
-					</div>
-
-					<div class="noticia-txt">
-						<h3>Libertadores</h3>
-						<small>Autor</small>
-						<p>Texto de la noticia</p>
-					</div>
-				</article>
-
-				<article class="noticia">
-					<div class="noticia-img">
-						<img src="img/sorteo-libertadores.jpg">
-					</div>
-
-					<div class="noticia-txt">
-						<h3>Libertadores</h3>
-						<small>Autor</small>
-						<p>Texto de la noticia</p>
-					</div>
-				</article>
-
-				<article class="noticia">
-					<div class="noticia-img">
-						<img src="img/sorteo-libertadores.jpg">
-					</div>
-
-					<div class="noticia-txt">
-						<h3>Libertadores</h3>
-						<small>Autor</small>
-						<p>Texto de la noticia</p>
-					</div>
-				</article>
-
-				<article class="noticia">
-					<div class="noticia-img">
-						<img src="img/sorteo-libertadores.jpg">
-					</div>
-
-					<div class="noticia-txt">
-						<h3>Libertadores</h3>
-						<small>Autor</small>
-						<p>Texto de la noticia</p>
-					</div>
-				</article>
-			</section>
-			<!-- Tabla de posiciones -->
-			<section id="tablaPosiciones">
-
-				<!--
-				<table width="800" border="1" cellpadding="10" cellspacing="0" align="center">
-				-->
-				<table>
-					<!-- ↓ Fila 0 ↓ -->
-					<tr>
-						<th colspan="4">3er Fecha</th>
-					</tr>
-					<!-- ↓ Fila 1 ↓ -->
-					<tr>
-						<td>1</td><!-- ◄ Celda 1 -->
-						<td><span>Tigre</span> 1pts<br>Patronato 3pts</td><!-- ◄ Celda 2 -->
-						<td>2</td><!-- ◄ Celda 3 -->
-						<td>Colón 4pts<br>Estudiantes 3ptos</td><!-- ◄ Celda 4 -->
-					</tr>
-					<!-- ↓ Fila 2 ↓ -->
-					<tr>
-						<td>3</td><!-- ◄ Celda 1 -->
-						<td>Def. y Justicia 1pts<br>Únion 4pts</td><!-- ◄ Celda 2 -->
-						<td>4</td><!-- ◄ Celda 3 -->
-						<td>Argentinos Juniors 0pts<br>Belgrano 3ptos</td><!-- ◄ Celda 4 -->
-					</tr>
-					<!-- ↓ Fila 3 ↓ -->
-					<tr>
-						<td>5</td><!-- ◄ Celda 1 -->
-						<td>Newell's 1pts<br>Olimpo 1pts</td><!-- ◄ Celda 2 -->
-						<td>6</td><!-- ◄ Celda 3 -->
-						<td>San Lorenzo 2pts<br>Arsenal 0ptos</td><!-- ◄ Celda 4 -->
-					</tr>
-					<!-- ↓ Fila 4 ↓ -->
-					<tr>
-						<td>7</td><!-- ◄ Celda 1 -->
-						<td>Independiente 4pts<br>Lanús 0pts</td><!-- ◄ Celda 2 -->
-						<td>8</td><!-- ◄ Celda 3 -->
-						<td>Talleres 3pts<br>Velez 0ptos</td><!-- ◄ Celda 4 -->
-					</tr>
-				</table>
-
-			</section>
-
-
-
-		</main>
-
-		<!-- PIE -->
-		<footer id="copyright">
-			<p>&copy; 2017-2019 DeporteXtremo - Derechos Reservados</p>
-		</footer>
-
-
+		<div class="container-fluid">
+			<div class="row">
+				<div id="productos" class="col-6  col-sm-4  col-md-12 col-xl-2 offset-xl-1">Mis Productos</div>
+				<div id="servicios" class="col-6  col-sm-4  col-lg-3  col-xl-2">Mis Servicios</div>
+				<div id="ofertas"   class="col-12 col-sm-4  col-lg-3  col-xl-2">Mis Ofertas</div>
+				<div id="noticias"  class="col-6  col-md-4  col-lg-3  col-xl-2">Mis Noticias</div>
+				<div id="articulos" class="col-6  col-md-12 col-lg-3  col-xl-2">Mis Articulos</div>
+			</div>
+		</div>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/popper.min.js" ></script>
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
