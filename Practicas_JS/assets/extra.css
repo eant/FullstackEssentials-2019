@@ -1,0 +1,36 @@
+section label {
+display: inline-block;
+margin-right: .3em;
+min-width: 110px;
+text-align: right;
+}
+section input.error {
+border-bottom: 2px solid red;
+}
+section input.ok {
+border-bottom: 2px solid green;
+}
+.esconder {
+display: none;
+}
+.habitacion {
+margin: 20px 0px;
+padding: 10px;
+}
+.habitacion-modesta {
+background: rgba(0,0,0,.15);
+border-left: 5px dashed gray;
+}
+.habitacion-elegante {
+background: rgba(255,255,0,.15);
+border-left: 5px dashed yellow;
+}
+.habitacion-lujosa {
+background: rgba(255,150,0,.15);
+border-left: 5px dashed orange;
+}
+.alerta {
+background: rgba(255,0,0,.15);
+color: red;
+padding: 1em;
+}
