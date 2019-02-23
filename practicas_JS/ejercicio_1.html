@@ -29,9 +29,21 @@
 
 		<script>
 			/* 1) Seleccionar el h1 y guardarlo en una variable */
+			var titulo = document.querySelector("h1");
 
 			/* 2) Modificar el texto interno de esta variable */
 
+			//Manipulacion de Comportamiento
+			titulo.onclick = manipular;
+
+			function manipular(){
+				//Manipulacion de Contenido
+				titulo.innerHTML = "Un titulo desde <em>JavaScript</em>";
+
+				//Manipulacion de Estructura
+				titulo.style.color = "red";
+				titulo.style.backgroundColor = "pink";
+			}
 			/* 3) Una vez que funcione, probar poniendo el <script> en el <head> para corroborar que JavaScript se ejecuta secuencialmente! */
 		</script>
 	</body>
