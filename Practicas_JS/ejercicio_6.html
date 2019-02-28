@@ -68,21 +68,30 @@
 		//habitaciones[0].classList.add("esconder")
 		//habitaciones[1].classList.add("esconder")
 		//habitaciones[2].classList.add("esconder")
+		esconderTodas();
 
-		for(var i = 0; i < habitaciones.length; i++){
-
-			habitaciones[i].classList.add("esconder")
+		function esconderTodas(){
+			for(var i = 0; i < habitaciones.length; i++){
+				habitaciones[i].classList.add("esconder")
+			}
 		}
 
 		function mostrarOpcion(){
+			
+			esconderTodas()
+
 			/* 5) Obtener la opción seleccionada */
 			var elegida = menu.value; //"modesta" | "elegante" | "lujosa" | "0"
+
+			if( elegida == "0" ) return
 
 			/* 6) Seleccionar la habitación correspondiente usando un selector dinámico */
 			var habitacion = document.querySelector(".habitacion-" + elegida);
 			
-			/* 7) Asignar la clase correspondiente */
+			//console.log( habitacion );
 
+			/* 7) Remover la clase correspondiente */
+			habitacion.classList.remove("esconder");
 		}
 		</script>
 	</body>
