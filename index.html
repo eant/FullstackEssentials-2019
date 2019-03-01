@@ -89,7 +89,7 @@
     <main class="container-fluid">
     	<section id="ultimas-noticias">
 
-    		<article class="row noticia">
+    		<article class="row noticia d-none">
     			<div class="noticia-img col-12 col-sm-5 col-lg-4">
     				<img src="https://via.placeholder.com/1000x600/" class="img-fluid">
     			</div>
@@ -111,13 +111,18 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/noticias.js"></script>
     <script>
-        var noticia = document.querySelector(".noticia");
+        for(var i = 0; i < noticias.length; i++){
+            var noticia = document.querySelector(".noticia").cloneNode(true);
 
-        noticia.querySelector("h3").innerText = titulo;
-        noticia.querySelector(".small a").innerText = autor;
-        noticia.querySelector("p:last-child").innerText = detalle;
-        noticia.querySelector("img").src = "img/" + imagen;
+            noticia.querySelector("h3").innerText = noticias[i][0];
+            noticia.querySelector(".small a").innerText = noticias[i][1];
+            noticia.querySelector("p:last-child").innerText = noticias[i][2];
+            noticia.querySelector("img").src = "img/" + noticias[i][3];
 
+            noticia.classList.remove("d-none");
+
+            document.querySelector("#ultimas-noticias").appendChild(noticia);
+        }
     </script>
 </body>
 

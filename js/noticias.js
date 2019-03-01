@@ -1,4 +1,6 @@
-var titulo = "La tecnología llega a la actual edición de la Libertadores";
-var autor = "Joaquín Angeli";
-var detalle = "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.";
-var imagen = "sorteo-libertadores.jpg";
+var noticias = [
+	/* 0 => */ ["La tecnología llega a la actual edición de la Libertadores", "Joaquín Angeli", "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.", "sorteo-libertadores.jpg"],
+	/* 1 => */ ["Comenzó la venta de entradas para el Mundial de Rusia 2018", "Laura Smasnatta", "Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'", "tickets-rusia-mundial.jpg"],
+	/* 2 => */ ["A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo", "Diego Di Marco", "El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia.", "firpo.jpg"],
+	/* 3 => */ ["Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI", "Melina Morales", "El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre.", "buenos-aires.jpg"]
+];
