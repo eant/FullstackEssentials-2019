@@ -33,12 +33,20 @@
 		<script>
 			function calcularIVA(){
 				/* 1) Seleccionar el campo numérico y guardarlo en una variable */
+				var casilla = document.querySelector("#precio");
 
 				/* 2) Obtener el valor del campo */
+				var valor = casilla.value * 1.21;
 
 				/* 3) Escribir en el span el valor del campo + IVA */
+				document.querySelector(".total").innerText = valor;
 
 				/* 4) Si el valor con IVA es superior a 100 modificar el estilo del mensaje */
+				if( valor > 100 ){
+
+					document.querySelector(".mensaje").style.color = "#F00"
+
+				}
 			}
 		</script>
 	</body>

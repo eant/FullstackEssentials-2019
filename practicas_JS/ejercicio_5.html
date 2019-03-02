@@ -33,11 +33,21 @@
 
 		<script>
 			/* 1) Seleccionar los campos por nombre utilizando la sintaxis CSS */
+			const email1 = document.querySelector("input[name=email]");
+			const email2 = document.querySelector("input[name=email2]");
 			
 			/* 2) Asignar la funcion validarEmail al evento correspondiente */
+			email2.onblur = validarEmail;
 
 			function validarEmail(){
 				/* 3) Si coinciden los valores, asignar la clase "ok", Sino... asignar la clase "error" */
+				if( email2.value == email1.value ){
+					email2.classList.add("ok");
+					email2.classList.remove("error")
+				} else {
+					email2.classList.add("error");
+					email2.classList.remove("ok");
+				}
 			}
 		</script>
 	</body>
