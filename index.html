@@ -109,8 +109,18 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/noticias.js"></script>
     <script>
+		///// AJAX /////
+		var ajax = new XMLHttpRequest();
+		ajax.open("GET", "js/noticias.json");
+		ajax.onload = function(){
+			if( ajax.status == 200 ){
+				console.log( ajax.response )
+			}
+		};
+		ajax.send();
+
+    	/*
         for(var i = 0; i < noticias.length; i++){
             var noticia = document.querySelector(".noticia").cloneNode(true);
 
@@ -123,6 +133,18 @@
 
             document.querySelector("#ultimas-noticias").appendChild(noticia);
         }
+        
+        var plantilla = document.querySelector(".noticia").cloneNode(true);
+  		
+  		plantilla.querySelector("h3").innerText = noticia.titulo;
+  		plantilla.querySelector(".small a").innerText = noticia.autor;
+  		plantilla.querySelector("p:last-child").innerText = noticia.detalle;
+  		plantilla.querySelector("img").src = "img/" + noticia.imagen;
+
+		plantilla.classList.remove("d-none");
+
+        document.querySelector("#ultimas-noticias").appendChild(plantilla);
+        */
     </script>
 </body>
 
