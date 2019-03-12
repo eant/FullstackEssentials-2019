@@ -1,0 +1,15 @@
+{
+  "name": "practicas_node",
+  "version": "1.0.0",
+  "description": "Primeros pasos en Node.js",
+  "main": "prueba.js",
+  "dependencies": {
+    "http": "0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silvio Messina",
+  "license": "ISC"
+}
