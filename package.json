@@ -1,0 +1,23 @@
+{
+  "name": "dx",
+  "version": "1.0.0",
+  "description": "DX - DeporteXtremo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eant/PWFE-M1-01.git"
+  },
+  "author": "SM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eant/PWFE-M1-01/issues"
+  },
+  "homepage": "https://github.com/eant/PWFE-M1-01#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
+}
