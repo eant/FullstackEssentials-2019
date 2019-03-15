@@ -112,10 +112,31 @@
     <script>
 		///// AJAX /////
 		var ajax = new XMLHttpRequest();
-		ajax.open("GET", "js/noticias.json");
+		ajax.open("GET", "https://api.sheety.co/0a889584-59ee-43e2-a609-3335d68ac8b8");
 		ajax.onload = function(){
 			if( ajax.status == 200 ){
-				console.log( ajax.response )
+                //console.log("Antes de parsear:")
+				//console.log( ajax.response )
+
+                let noticias = JSON.parse( ajax.response )
+
+                //console.log("Despues de parsear:")
+                //console.log( noticias )
+
+                noticias.forEach(function(noticia){
+
+                    let ficha = document.querySelector(".noticia").cloneNode(true);
+
+                    ficha.querySelector("h3").innerText = noticia.titulo;
+                    ficha.querySelector(".small a").innerText = noticia.autor;
+                    ficha.querySelector("p:last-child").innerText = noticia.detalle;
+                    ficha.querySelector("img").src = noticia.imagen;
+
+                    ficha.classList.remove("d-none");
+
+                    document.querySelector("#ultimas-noticias").appendChild(ficha);
+
+                })
 			}
 		};
 		ajax.send();
