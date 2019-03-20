@@ -19,6 +19,18 @@ http.createServer(function(request, response){
 
 	//let ext = String( path.extname(file) ).toLowerCase()
 
+	if( file == "/enviar" ){
+		
+		console.log("Este es el body de la peticion HTTP:")
+		
+		request.on("data", function(body){
+			let datos = body.toString()
+			console.log( datos )
+		})
+
+		response.end("Mira la consola de Git Bash")
+	}
+
 	let ext = path.extname(file)
 	    ext = String(ext)
 	    ext = ext.toLowerCase()
