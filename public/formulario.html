@@ -53,26 +53,32 @@
     
     <main class="container-fluid">
     	<!-- INICIO FORM -->
-		<form action="./enviar" method="POST">
-			<!--
-				Query String:
-				?correo=pepe%40gmail.com&clave=papa12
-			 -->
-			<div class="form-group">
-				<label for="exampleInputEmail1">Email address</label>
-				<input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    	<h3>Nueva Noticia</h3>
+		<form action="./enviar" method="POST" class="row">
+			<!-- Construir noticias aqui -->
+			<div class="form-group col-8 offset-2">
+				<label for="titulo">Titulo:</label>
+				<input type="text" name="titulo" class="form-control">
 			</div>
-			<div class="form-group">
-				<label for="exampleInputPassword1">Password</label>
-				<input type="password" name="clave" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+			<div class="form-group col-8 offset-2">
+				<label for="autor">Autor:</label>
+				<input type="text" name="autor" class="form-control">
 			</div>
-			<div class="form-group form-check">
-				<input type="checkbox" name="suscribirse" class="form-check-input" id="exampleCheck1">
-				<label class="form-check-label" for="exampleCheck1">Check me out</label>
+			
+			<div class="form-group col-8 offset-2">
+				<label for="detalle">Detalle:</label>
+				<textarea name="detalle" class="form-control" rows="3"></textarea>
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
-			<input type="submit" value="Enviar" class="btn btn-primary">
+			
+			<div class="form-group col-8 offset-2">
+				<label for="imagen">Imagen:</label>
+				<input type="text" name="imagen" class="form-control">
+			</div>
+
+			<div class="form-group col-8 offset-2">
+				<input type="submit" value="Enviar" class="btn btn-primary">
+			</div>
 		</form>
     	<!-- FIN FORM -->
     </main>

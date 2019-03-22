@@ -1,23 +1,34 @@
 const http = require("http")
 const fs = require("fs")
 const path = require("path")
+const form = require("querystring")
+const loki = require("lokijs")
+
+let noticias = null;
+
+//const db = new loki("public/js/noticias2.json", { //<-- Puedo usar URL relativas para definir ubicacion del JSON 
+const db = new loki("noticias.json", {
+    autoload : true,
+    autosave : true,
+    autosaveInterval : 4000,
+    autoloadCallback : function(){
+    	noticias = db.getCollection("noticias") //<-- "Intentar" leer las noticias del JSON
+    	
+    	console.log("ANDA")
+    	
+    	if( noticias === null ){ //<-- Si "NO" pudo leerlas, es porque no existen...
+    		noticias = db.addCollection("noticias") //<-- ... entonces "crear" la coleccion de noticias
+    	}
+
+    	console.log( noticias )
+    }
+})
 
 http.createServer(function(request, response){
 
 	const dir = "public/" //<-- Definir el directorio de los archivos web
 
-	//const url = request.url //<-- Leer la ruta/recurso solicitado en la URL
-/*
-	if( request.url == "/" ){
-		const file = "index.html"
-	} else {
-		const file = request.url
-	}
-*/
-	//const file = (CONDICION) ? VERDADERO : FALSO //<-- Operador Ternario
 	const file = (request.url == "/") ? "index.html" : request.url
-
-	//let ext = String( path.extname(file) ).toLowerCase()
 
 	if( file == "/enviar" ){
 		
@@ -25,7 +36,8 @@ http.createServer(function(request, response){
 		
 		request.on("data", function(body){
 			let datos = body.toString()
-			console.log( datos )
+
+			noticias.insert( form.parse(datos) )
 		})
 
 		response.end("Mira la consola de Git Bash")
@@ -55,9 +67,6 @@ http.createServer(function(request, response){
 	}
 
 	let contentType = tipos[ext] || "application/octet-stream"
-
-	console.log("Usted ha pedido el archivo: " + file)
-	console.log("La extension del archivo es: " + ext)
 
 	fs.readFile(dir + file, function(error, content){ //<-- "Intentar" leer/cargar el archivo/recurso solicitado
 
