@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es-AR">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="msapplication-TileColor" content="#343a40">
+		<meta name="theme-color" content="#343a40">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+		<link rel="icon" sizes="32x32" type="image/png" href="img/favicons/favicon-32x32.png">
+		<link rel="icon" sizes="16x16" type="image/png" href="img/favicons/favicon-16x16.png">
+		<link rel="manifest" href="img/favicons/site.webmanifest">
+		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#343a40">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<title>DX - DeporteXtremo</title>
+	</head>
+	<body>
+		<!-- INICIO HEADER-MENU -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">
+				<img src="img/logo.png" width="50" class="d-inline-block align-center" alt="">
+				<span class="font-weight-bold">DeporteXtremo</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="menu">
+				<ul class="navbar-nav text-center">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Fútbol <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">NBA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Tenis</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Fórmula 1</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Boxéo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">JJOO</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">MotoGP</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- FIN HEADER-MENU -->
+
+		<!-- INICIO NOTICIAS -->
+		<main class="container-fluid">
+			<h3>Formulario de Noticias</h3>
+			<!-- INICIO FORMULARIO -->
+			<form action="./enviar" method="post">
+				<div class="form-group">
+					<label for="titulo">Titulo:</label>
+					<input type="text" name="titulo" class="form-control" placeholder="Ej: Murio Kennedy">
+				</div>
+
+				<div class="form-group">
+					<label for="autor">Autor:</label>
+					<input type="text" name="autor" class="form-control" placeholder="Ej: Julio Sanchéz">
+				</div>
+
+				<div class="form-group">
+					<label for="detalle">Detalle:</label>
+					<textarea name="detalle" class="form-control" rows="5" placeholder="Ej: Una bala le saco las ideas de encima..."></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="imagen">Imagen:</label>
+					<input type="text" name="imagen" class="form-control" placeholder="Ej: https://ibb.co/b27g2u/noticia.jpg">
+				</div>
+				
+				<div class="form-group">
+					  <!--
+					  <button type="submit" class="btn btn-primary">Enviar</button>
+					  -->
+					  <input type="submit" value="Enviar" class="btn btn-dark">
+				</div>
+			</form>
+			<!-- FIN DEL FORMULARIO-->
+		</main>
+		<!-- FIN NOTICIAS -->
+
+		<!-- INICIO PIE-PAGINA -->
+		<footer class="p-2 bg-dark text-white text-center">
+			<small>&copy; 2019 - DeporteXtremo - Derechos Reservados</small>
+		</footer>
+		<!-- FIN PIE-PAGINA -->
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/popper.min.js"></script>-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script>
+			
+		</script>
+	</body>
+</html>
