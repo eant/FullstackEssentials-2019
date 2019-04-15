@@ -4,17 +4,40 @@
 		<meta charset="utf-8">
 		<title>EANT - Fullstack Essentials</title>
 		<style>
+			/* Comentario: Anatomia de una Regla CSS; */
+			/*
+			selector {
+				propiedad : valor;
+				propiedad : valor;
+				propiedad : valor;
+			}
+			*/
 			h1 {
 				color: orange;
 				font-family: Arial;
 				font-size: 28px;
 				text-decoration: underline;
 			}
+			a {
+				color: white;
+				text-decoration: none;
+				background-color: grey;
+			}
+			a:hover {
+				background-color: black;
+			}
 		</style>
 	</head>
 
 	<body>
 		<h1 style="font-size:12px">Aprendiendo Git</h1>
-		<p>Git es un <strong>software</strong> de control de versiones diseñado por <em>Linus Torvalds</em>.</p>
+		<p>Git es un <strong onclick="saludar()">software</strong> de control de versiones diseñado por <a href="https://es.wikipedia.org/wiki/Linus_Torvalds" target="_blank" title="Ver más en la Wikipedia">Linus Torvalds</a>.</p>
+		
+		<!-- AREA DE SCRIPT -->
+		<script>
+			function saludar(){
+				alert("Hola desde JavaScript!")
+			}
+		</script>
 	</body>
 </html>
