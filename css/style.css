@@ -6,17 +6,44 @@ selector {
 	propiedad : valor;
 }
 */
-h1 {
-	color: orange;
-	font-family: Arial;
-	font-size: 28px;
-	text-decoration: underline;
+* {
+	outline: dotted 1px red;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	margin: 0;
 }
 a {
-	color: white;
+	color: #333;
 	text-decoration: none;
-	background-color: grey;
 }
-a:hover {
-	background-color: black;
+header {
+	background-color: #333;
+	color: #FFF;
+	padding: 15px;
+	overflow: hidden;
+}
+header a {
+	color: #FFF;
+	display: block;
+	padding: 5px;
+	text-align: center;
+}
+header h1 {
+	margin: 0;
+	float: left;
+}
+header nav {
+	float: right;
+}
+header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+header ul li {
+	display: inline-block;
 }
