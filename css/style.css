@@ -32,9 +32,18 @@ header a {
 	padding: 5px;
 	text-align: center;
 }
+header a:hover {
+	color: #AAA
+}
 header h1 {
-	margin: 0;
 	float: left;
+	font-size: 28px;
+	font-weight: 700;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+	padding-left: 70px;
 }
 header nav {
 	float: right;
