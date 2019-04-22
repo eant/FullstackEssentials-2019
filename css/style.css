@@ -16,6 +16,10 @@ body {
 	color: #333;
 	margin: 0;
 }
+img {
+	display: block;
+	width: 100%;
+}
 a {
 	color: #333;
 	text-decoration: none;
@@ -55,4 +59,24 @@ header ul {
 }
 header ul li {
 	display: inline-block;
+}
+#noticias-destacadas img { /* <-- refiere a un elemento con id="noticias-destacadas" */
+	width: 100%;
+	display: block;
+}
+#noticias-destacadas figure {
+	margin: 0;
+}
+#noticias-destacadas h2 {
+	background-color: #333;
+	color: #FFF;
+	font-size: 32px;
+	font-weight: 700;
+	padding: 20px;
+}
+.noticia-img {
+	width: 35%;
+}
+.noticia-txt {
+	width: 65%;
 }
