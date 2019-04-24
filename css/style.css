@@ -1,0 +1,19 @@
+/* Estilos Generales */
+body {
+	font-family: Helvetica, Arial, Open Sans, sans-serif;
+	font-size: 14px;
+	color: #333;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+/* Estilos Particulares */
+header {
+	background-color: #333;
+}
+header h1 {
+	color: #FFF;
+	margin: 0;
+}
