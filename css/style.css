@@ -74,9 +74,39 @@ header ul li {
 	font-weight: 700;
 	padding: 20px;
 }
+.noticia {
+	display: flex;
+	flex-direction: row;
+	align-items: center; /* flex-start | center | flex-end */
+	justify-content: space-around; /* flex-start | center | flex-end | space-around | space-between */
+	
+	border-bottom: solid 1px #CCC;
+	padding: 20px 0;
+	margin: 0 20px;
+}
+.noticia:last-child {
+	border: none;
+}
 .noticia-img {
-	width: 35%;
+	width: 30%;
 }
 .noticia-txt {
-	width: 65%;
+	width: 60%;
+}
+.noticia-txt h3,
+.noticia-txt p,
+.noticia-txt blockquote {
+	margin: 20px 0;
+	line-height: 1.5;
+}
+.noticia-txt h3 {
+	font-weight: 700;
+	font-size: 28px;
+}
+.noticia-txt p a {
+	color: #000;
+	font-weight: 700;
+}
+#tabla-posiciones table {
+	margin: auto;
 }
