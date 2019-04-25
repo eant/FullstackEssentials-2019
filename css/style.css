@@ -1,4 +1,8 @@
 /* Estilos Generales */
+* {
+	outline: dotted 1px red;
+}
+
 body {
 	font-family: Helvetica, Arial, Open Sans, sans-serif;
 	font-size: 14px;
@@ -17,3 +21,23 @@ header h1 {
 	color: #FFF;
 	margin: 0;
 }
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+header nav ul li {
+	display: inline-block;
+}
+header nav a {
+	text-align: center;
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
