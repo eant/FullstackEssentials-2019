@@ -16,10 +16,17 @@ a {
 /* Estilos Particulares */
 header {
 	background-color: #333;
+	overflow: hidden;
+	padding: 15px;
 }
 header h1 {
 	color: #FFF;
 	margin: 0;
+	float: left;
+}
+header nav {
+	float: right;
+	padding: 10px;
 }
 header nav ul {
 	margin: 0;
@@ -33,7 +40,10 @@ header nav a {
 	text-align: center;
 	padding: 5px;
 }
-
+header nav a:hover {
+	color: #333;
+	background-color: #FFF;
+}
 
 
 
