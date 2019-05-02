@@ -21,8 +21,14 @@ header {
 }
 header h1 {
 	color: #FFF;
-	margin: 0;
 	float: left;
+	font-weight: 700;
+	font-size: 28px;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	padding-left: 75px;
+	line-height: 1.5;
+	background-position: left center;
 }
 header nav {
 	float: right;
