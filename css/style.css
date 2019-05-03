@@ -109,4 +109,35 @@ header ul li {
 }
 #tabla-posiciones table {
 	margin: auto;
+	border-collapse: collapse;
+	border: none;
+	width: 80%;
+}
+#tabla-posiciones table th {
+	background-color: red;
+	color: #FFF;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 20px;
+}
+#tabla-posiciones table td {
+	background-color: #D9D9D9;
+	padding: 10px;
+}
+#tabla-posiciones table td:nth-of-type(odd){
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+#tabla-posiciones table td:nth-of-type(even) span {
+	color: #009688;
+	font-weight: bold;
+}
+#tabla-posiciones table tr {
+	border-bottom: solid 1px #CCC
+}
+#tabla-posiciones table tr:first-child,
+#tabla-posiciones table tr:last-child {
+	border: none;
 }
