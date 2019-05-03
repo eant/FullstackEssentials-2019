@@ -141,3 +141,11 @@ header ul li {
 #tabla-posiciones table tr:last-child {
 	border: none;
 }
+footer {
+	background-color: #333;
+	color: #FFF;
+	text-align: center;
+	font-size: 10px;
+	padding: 10px;
+	margin-top: 20px;
+}
