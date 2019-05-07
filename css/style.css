@@ -52,10 +52,43 @@ header nav a:hover {
 }
 #noticias-destacadas img {
 	width: 100%;
+	display: block;
+}
+#noticias-destacadas figcaption {
+	background-color: #333;
+	padding: 15px;
+}
+#noticias-destacadas h2 {
+	color: #FFF;
+	font-size: 36px;
+	font-weight: 700;
 }
 
+.noticia-img {
+	width: 30%;
+}
+.noticia-img img {
+	width: 100%;
+}
 
-
-
-
+.noticia-txt {
+	width: 70%;
+}
+.noticia-txt h3 {
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.noticia-txt p {
+	font-size: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.noticia-txt a {
+	color: #000;
+}
+.noticia-txt a:hover {
+	color: #D9D9D9;
+}
 
