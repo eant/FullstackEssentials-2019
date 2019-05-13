@@ -1,14 +1,42 @@
 <h1>Introduccion a JavaScript</h1>
 <script>
+	/* Introduccion */
 	const IVA = 1.21
 
 	let nombre = prompt("Ingrese nombre:")
 	let stock = prompt("Ingrese stock:")
 	let precio = prompt("Ingrese precio:")
 	let disponible = confirm("¿Disponible para la venta?")
+	let ficha, estado, accion = null
 
+	/* Nudo */
 	precio = precio * IVA
 
-	console.log(`Hay ${stock} unid. de ${nombre} a AR ${precio} c/u`)
+	//Si el producto esta disponible...
+	//if( precio > 100 && precio < 200 ){}
+
+	if( disponible ){
+		estado = "Producto disponible :)"
+		accion = `<button>Comprar</button>`
+	} else {
+		estado = "Producto NO disponible :("
+		accion = `<a href="#">Recibir alerta cuando este disponible</a>`
+	}
+
+	/* Desenlace */
+	//ficha = `<p>Hay ${stock} unid. de <em>${nombre}</em> a AR ${precio} c/u</p>`
+
+	ficha = `<ul>
+				<li>Nombre: ${nombre}</li>
+				<li>Precio: ${precio} AR</li>
+				<li>Stock: ${stock} unid.</li>
+				<li>Estado: ${estado}</li>
+				<li>${accion}</li>
+			 </ul>`
+
+	document.write(ficha)
 
 </script>
+
+<!-- ul>li*4>{dato: valor} -->
+
