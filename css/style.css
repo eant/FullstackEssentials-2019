@@ -152,3 +152,43 @@ footer p {
 	color: #45bbbb;
 	font-weight: 700;
 }
+#menu-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 576px) {
+/* Inicio media query 800px */
+	body {
+		color: red;
+	}
+	#menu {
+		display: none;
+		float: none;
+		clear: both;
+	}
+	#menu li {
+		display: block;
+		text-align: center;
+	}
+	#menu li a {
+		display: block;
+	}
+	#menu-mobile {
+		display: block;
+		float: right;
+		background-color: transparent;
+		border: none;
+		color: #FFF;
+		font-size: 24px;
+		line-height: 1;
+		font-weight: 700;
+		padding: 8px;
+	}
+	#menu-mobile:focus + #menu {
+		display: block;
+	}
+/* Fin media query 800px */
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+	
+}
