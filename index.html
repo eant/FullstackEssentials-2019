@@ -53,8 +53,7 @@
               <a class="nav-link" href="#"><i class="fas fa-motorcycle"></i> Moto GP</a>
             </li>
            
-          </ul>
-          
+          </ul> 
         </div>
       </nav>
       <!-- Fin Menu -->
@@ -96,43 +95,7 @@
 
       <section id="ultimas-noticias" class="row">
 
-        <div class="col-12 col-md-6 col-lg-12">
-          <!-- Noticia #1 -->
-          <article class="row noticia">
-            <!-- Inicio Noticia -->
-            <div class="col-12 col-lg-4 noticia-img">
-              <img src="img/sorteo-libertadores.jpg" class="img-fluid">
-            </div>
-
-            <div class="col-12 col-lg-8 noticia-txt">
-              <h3>La tecnología llega a la actual edición de la Libertadores</h3>
-              <p>por Joaquín Angeli</p>
-              <p>La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.</p>
-            </div>
-            <!-- Fin Noticia -->
-          </article>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-12">
-          <!-- Noticia #2 -->
-          <article class="row noticia">
-            <!-- Inicio Noticia -->
-            <div class="col-12 col-lg-4 noticia-img">
-              <img src="img/tickets-rusia-mundial.jpg" class="img-fluid">
-            </div>
-
-            <div class="col-12 col-lg-8 noticia-txt">
-              <h3>Comenzó la venta de entradas para el Mundial de Rusia 2018</h3>
-              <p>por Laura Smasnatta</p>
-              <p>Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'.</p>
-            </div>
-            <!-- Fin Noticia -->
-          </article>
-        </div>
-
       </section>
-      
-      
 
     </main>
 
@@ -141,5 +104,24 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+      
+      let noticia1 = [
+        "La tecnología llega a la actual edición de la Libertadores",
+        "Joaquín Angeli",
+        "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores."
+      ]
+
+      let noticia2 = ["Comenzó la venta de entradas para el Mundial de Rusia 2018", "Laura Smasnatta", "Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'."]
+      let noticia3 = ["A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo", "Diego Di Marco", "El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia."]
+      let noticia4 = ["Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI", "Melina Morales", "El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre."]
+
+      crearNoticia(noticia1[0], noticia1[1], noticia1[2])
+      crearNoticia(noticia2[0], noticia2[1], noticia2[2])
+      crearNoticia(noticia3[0], noticia3[1], noticia3[2])
+      crearNoticia(noticia4[0], noticia4[1], noticia4[2])
+
+    </script>
   </body>
 </html>
