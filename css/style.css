@@ -1,0 +1,33 @@
+body {
+	font-family: Arial;
+	font-size: 14px;
+	color: #222;
+	margin: 0;
+}
+header {
+	background-color: #333;
+	padding: 10px;
+	overflow: hidden;
+}
+header h1 {
+	color: #FFF;
+	margin: 0;
+	float: left;
+}
+nav {
+	float: right;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav li {
+	display: inline-block;
+}
+nav li a {
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+	padding: 10px;
+}
