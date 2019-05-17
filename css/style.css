@@ -2,7 +2,6 @@ body {
 	font-family: Arial;
 	font-size: 14px;
 	color: #222;
-	margin: 0;
 }
 header {
 	background-color: #333;
@@ -11,16 +10,21 @@ header {
 }
 header h1 {
 	color: #FFF;
-	margin: 0;
 	float: left;
+	font-size: 24px;
+	font-weight: 700;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: left center;
+	padding-left: 60px;
+	margin-top: 5px; 
 }
 nav {
 	float: right;
 }
 nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	
 }
 nav li {
 	display: inline-block;
@@ -30,4 +34,8 @@ nav li a {
 	color: #FFF;
 	display: block;
 	padding: 10px;
+}
+nav li a:hover {
+	color: #333;
+	background-color: #FFF;
 }
