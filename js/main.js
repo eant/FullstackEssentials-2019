@@ -12,10 +12,10 @@ function cambiarLogo(){
 	logo.classList.add("text-uppercase")
 }
 
-function crearNoticia(titulo, autor, bajada){
+function crearNoticia(titulo, autor, bajada, imagen){
 	let plantilla = `<article class="row noticia">
                         <div class="col-12 col-lg-4 noticia-img">
-                          <img src="img/sorteo-libertadores.jpg" class="img-fluid">
+                          <img src="img/${imagen}" class="img-fluid">
                         </div>
 
                         <div class="col-12 col-lg-8 noticia-txt">
