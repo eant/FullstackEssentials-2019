@@ -8,6 +8,7 @@ body {
 }
 img {
 	display: block;
+	width: 100%;
 }
 header {
 	background-color: #333;
@@ -54,4 +55,32 @@ nav li a:hover {
 	font-weight: 700;
 	padding: 20px;
 	font-size: 48px;
+}
+.noticia {
+	display: flex;
+	flex-direction: row; /* row | column | row-reverse | column-reverse */
+	align-items: center; /* flex-start | center | flex-end */
+	justify-content: space-around; /* flex-start | center | flex-end | space-between |  */
+}
+.noticia-img {
+	width: 30%
+}
+.noticia-txt {
+	width: 65%;
+}
+.noticia-txt h3 {
+	font-size: 32px;
+	font-weight: 700;
+}
+.noticia-txt p {
+	font-size: 20px;
+}
+.noticia-txt p:nth-of-type(1) {
+	font-weight: 700;
+}
+.noticia-txt h3,
+.noticia-txt p {
+	line-height: 1.5;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
