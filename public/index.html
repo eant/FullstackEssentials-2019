@@ -109,28 +109,30 @@
       
       let ajax = new XMLHttpRequest()
       ajax.open("GET", "noticias.json")
-      ajax.onload = mostrarNoticias
-      ajax.send()
-
-
-      function mostrarNoticias(){
+      ajax.onload = function(){
 
         if( ajax.status == 200 ){ //<-- Respuesta Exitosa!
 
+          console.log("Antes del parseo")
           console.log( ajax.response )
 
+          let noticias = JSON.parse(ajax.response)
+
+          console.log("Despues del parseo")
+          console.log( noticias )
+
+          /* Mostrar las noticias */
+          for(let i = 0; i < noticias.length; i++){
+
+            console.log(`Voy a imprimir la noticia que esta en la posicion: ${i}`)
+
+            crearNoticia(noticias[i].titulo, noticias[i].autor, noticias[i].bajada, noticias[i].imagen)
+
+          }
+          /* Fin de Mostrar las noticias */
         }
-
       }
-
-
-      for(let i = 0; i < noticias.length; i++){
-
-        console.log(`Voy a imprimir la noticia que esta en la posicion: ${i}`)
-
-        crearNoticia(noticias[i].titulo, noticias[i].autor, noticias[i].bajada, noticias[i].imagen)
-
-      }
+      ajax.send()
 
     </script>
   </body>
