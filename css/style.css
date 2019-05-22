@@ -1,5 +1,5 @@
 * {
-	outline: dotted 1px red;
+	/*outline: dotted 1px red;*/
 }
 body {
 	font-family: Arial;
@@ -61,7 +61,27 @@ nav li a:hover {
 	flex-direction: row; /* row | column | row-reverse | column-reverse */
 	align-items: center; /* flex-start | center | flex-end */
 	justify-content: space-around; /* flex-start | center | flex-end | space-between |  */
+
+	border-bottom: solid 1px #DDD;
+	/*
+	- Version extendida:
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 20px;
+	margin-left: 20px;
+	
+	- Version simplificada (top/right/bottom/left)
+	margin: 0 20px 0 20px;
+	*/
+	margin: 0 20px; /* <- Version reducida (y/x) */
+
+	/* margin: 15px 20px 25px; <-- Version mixta (top/x/bottom) */
+
 }
+.noticia:last-child {
+	border: none;
+}
+
 .noticia-img {
 	width: 30%
 }
@@ -83,4 +103,12 @@ nav li a:hover {
 	line-height: 1.5;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+footer {
+	background-color: #333;
+	padding: 10px;
+	text-align: center;
+	color: #FFF;
+	font-size: 12px;
+	margin-top: 10px;
 }
