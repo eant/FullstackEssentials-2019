@@ -1,40 +1,58 @@
-<h1>Kiosko "El JeviScript"</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Kiosko "El JeviScript"</title>
+		<link rel="stylesheet" href="https://docs.google.com/uc?id=17C6A6tYbFc9esDbgo0Q-HjN2rNjvXbyc">
+	</head>
+	<body>
+		<h1>Kiosko <strong>El JeviScript</strong></h1>
 
-<button>Nuevo Producto +</button>
+		<button>Nuevo Producto +</button>
 
-<section id="productos">
-	
-</section>
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Stock</th>
+					<th>Precio</th>
+					<th>Disponible</th>
+				</tr>
+			</thead>
+			<tbody id="productos">
+				<!-- ACÁ TIENEN QUE APARECER LOS PRODUCTOS -->
+			</tbody>
+		</table>
 
-<script>
-	document.querySelector("button").onclick = cargarProducto
+		<script>
+			document.querySelector("button").onclick = cargarProducto
 
-	function cargarProducto(){
-		/**** Inicio fn ****/
+			function cargarProducto(){
+				/**** Inicio cargarProducto() ****/
 
-		/* Introdccion */
-		let nombre = prompt("Ingrese nombre:") //<-- string
-		let stock = prompt("Ingrese stock:") //<-- int
-		let precio = prompt("Ingrese precio:") //<-- float
-		let disponible = confirm("Esta disponible?") //<-- bool
+				/* Introdccion */
+				let nombre = prompt("Ingrese nombre:")       //<-- String: Valores Alfanuméricos
+				let stock = prompt("Ingrese stock:")         //<-- Int: Números Enteros
+				let precio = prompt("Ingrese precio:")       //<-- Float: Números con Decimales
+				let disponible = confirm("Esta disponible?") //<-- Bool: Valores true/false
 
-		/* Nudo */
-		if( nombre == "" ){
+				/* Nudo */
+				if( nombre == "" ){
 
-			alert("ERROR: El nombre no puede quedar vacio...")
+					alert("ERROR: El nombre no puede quedar vacio...")
 
-			return
-		}
+					return
+				}
 
-		let precioFinal = precio * 1.21
+				let precioFinal = precio * 1.21
 
-		/* Desenlace */
-		let msg = `<p>El producto <strong>${nombre}</strong> vale ARS ${precioFinal} la unidad</p>` //<-- Template String
+				/* Desenlace */
+				let msg = `<p>El producto <strong>${nombre}</strong> vale ARS ${precioFinal} la unidad</p>` //<-- Template String
 
-		document.querySelector("#productos").insertAdjacentHTML("afterend", msg)
+				document.querySelector("#productos").insertAdjacentHTML("afterend", msg)
 
-		//document.write(`<p>El producto <strong>${nombre}</strong> vale ARS ${precioFinal} la unidad</p>`)
-
-		/**** Fin fn ****/
-	}
-</script>
+				/**** Fin cargarProducto() ****/
+			}
+		</script>
+	</body>
+</html>
