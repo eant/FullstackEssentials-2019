@@ -108,7 +108,7 @@
     <script>
       
       let ajax = new XMLHttpRequest()
-      ajax.open("GET", "noticias.json")
+      ajax.open("GET", " https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.iprofesional.com%2Frss%2Ftecnologia")
       ajax.onload = function(){
 
         if( ajax.status == 200 ){ //<-- Respuesta Exitosa!
@@ -121,14 +121,26 @@
           console.log("Despues del parseo")
           console.log( noticias )
 
+          //return
+
           /* Mostrar las noticias */
-          for(let i = 0; i < noticias.length; i++){
+          
+          /*
+          for(let i = 0; i < noticias.items.length; i++){
 
             console.log(`Voy a imprimir la noticia que esta en la posicion: ${i}`)
 
-            crearNoticia(noticias[i].titulo, noticias[i].autor, noticias[i].bajada, noticias[i].imagen)
+            crearNoticia(noticias.items[i].title, noticias.items[i].author, noticias.items[i].description, noticias.items[i].enclosure.link)
 
           }
+          */
+
+          noticias.items.forEach(function(noticia){
+
+            crearNoticia(noticia.title, noticia.author, noticia.description, noticia.enclosure.link)
+
+          })
+          
           /* Fin de Mostrar las noticias */
         }
       }
