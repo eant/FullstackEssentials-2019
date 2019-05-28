@@ -154,3 +154,47 @@ footer {
 	font-weight: 700;
 	color: darkblue;
 }
+
+button {
+	display: none;
+}
+
+@media screen and (max-width: 767px){ /* <-- Hasta una tablet de 7' */
+	/* Reglas que aplican en pantallas de hasta 768px de ancho */
+	nav {
+		display: none;
+		float: none;
+		clear: both;
+	}
+	nav li {
+		display: block;
+		text-align: center;
+	}
+	.noticia {
+		flex-direction: column;
+	}
+	.noticia-img,
+	.noticia-txt {
+		width: 100%;
+	}
+	button {
+		display: block;
+		padding: 5px;
+		border: none;
+		background-color: transparent;
+		color: #FFF;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1;
+		float: right;
+	}
+	button:focus + nav {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 575px){ /* <-- Hasta un smartphone de 6' */
+/***************************/
+	
+/***************************/
+}
