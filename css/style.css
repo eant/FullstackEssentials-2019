@@ -6,3 +6,36 @@ selector {
 	propiedad: valor;
 }
 */
+body {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	color: #333333;
+	margin: 0;
+}
+header {
+	background-color: #333333;
+	padding: 15px;
+	
+}
+header h1 {
+	color: #FFFFFF;
+	margin: 0;
+}
+header a {
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+}
+header a:hover {
+	background-color: #FFFFFF;
+	color: #333333;
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+}
