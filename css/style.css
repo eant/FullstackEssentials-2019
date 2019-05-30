@@ -21,11 +21,12 @@ header h1 {
 	color: #FFFFFF;
 	margin: 0;
 	float: left;
-
 	background-image: url('../img/logo.png');
 	background-repeat: no-repeat;
-
+	background-size: contain;
 	padding-left: 75px;
+	font-size: 28px;
+	font-weight: 700;
 }
 header a {
 	color: #FFFFFF;
@@ -47,4 +48,17 @@ nav ul {
 }
 nav ul li {
 	display: inline-block;
+}
+img {
+	display: block;
+	width: 100%;
+}
+#noticias-destacadas figcaption { /* <-- busca al elemento con id="noticias-destacadas" */
+	background-color: #333333;
+	padding: 15px;
+}
+#noticias-destacadas h2 {
+	color: #FFFFFF;
+	font-size: 32px;
+	font-weight: 700;
 }
