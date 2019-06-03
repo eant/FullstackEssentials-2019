@@ -1,6 +1,25 @@
-const http = require("http");
-const fs = require("fs");
+const http = require("http")
+const fs = require("fs")
 const form = require("querystring")
+const loki = require("lokijs")
+
+let noticias = null;
+
+let db = new loki("public/db/noticias.json", {
+	autoload : true,
+	autosave : true,
+	autosaveInterval : 3000,
+	autoloadCallback : function(){
+
+		noticias = db.getCollection("noticias")
+
+		if( noticias == null ){
+
+			noticias = db.addCollection("noticias")
+
+		}
+	}
+})
 
 http.createServer(function(request, response){
 		
@@ -14,11 +33,13 @@ http.createServer(function(request, response){
 
 			request.on("data", function(datos){
 
-				datos = datos.toString()
+				let noticia = datos.toString()
 
-				datos = form.parse( datos )
+				noticia = form.parse( noticia )
+
+				noticias.insert(noticia)
 				
-				response.end( JSON.stringify(datos) )
+				response.end("Noticia guardada exitosamente :D")
 
 			})
 
