@@ -60,20 +60,36 @@
 
       <main class="container-fluid">
 
-        <form action="enviar/" method="post">
+        <!-- INICIO FORMULARIO -->
+        <form action="./enviar" method="post">
+          <div class="form-group">
+            <label for="titulo">Titulo:</label>
+            <input type="text" name="titulo" class="form-control" placeholder="Ej: Murio Kennedy">
+          </div>
 
-          <label for="nombre">Nombre completo:</label>
-          <input type="text" name="nombre" class="form-control" placeholder="Ej: Cosme Fulanito">
-          
-          <label for="dni">DNI:</label>
-          <input type="number" name="dni" class="form-control" placeholder="Ej: 11223344">
+          <div class="form-group">
+            <label for="autor">Autor:</label>
+            <input type="text" name="autor" class="form-control" placeholder="Ej: Julio Sanchéz">
+          </div>
 
-          <label for="">E-Mail:</label>
-          <input type="email" name="correo" class="form-control" placeholder="Ej: cosme@fulanito.com">
+          <div class="form-group">
+            <label for="detalle">Detalle:</label>
+            <textarea name="detalle" class="form-control" rows="5" placeholder="Ej: Una bala le saco las ideas de encima..."></textarea>
+          </div>
 
-          <input type="submit" value="Enviar" class="btn btn-primary">
+          <div class="form-group">
+            <label for="imagen">Imagen:</label>
+            <input type="text" name="imagen" class="form-control" placeholder="Ej: https://ibb.co/b27g2u/noticia.jpg">
+          </div>
 
+          <div class="form-group">
+            <!--
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            -->
+            <input type="submit" value="Enviar" class="btn btn-dark">
+          </div>
         </form>
+        <!-- FIN DEL FORMULARIO-->
 
       </main>
 
