@@ -94,3 +94,47 @@ img {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
+#tabla-posiciones table,
+#tabla-posiciones tr,
+#tabla-posiciones td {
+	/*border: solid 1px #000000;*/
+}
+
+#tabla-posiciones td,
+#tabla-posiciones th {
+	padding: 12px;
+}
+#tabla-posiciones th {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 700;
+}
+#tabla-posiciones td {
+	background-color: #D9D9D9;
+	vertical-align: middle;
+}
+#tabla-posiciones tr {
+	border-bottom: solid 1px #999999;
+}
+#tabla-posiciones tr:first-child,
+#tabla-posiciones tr:last-child {
+	border: none;
+}
+#tabla-posiciones table {
+	width: 600px;
+	margin: auto;
+}
+
+#tabla-posiciones td:nth-of-type(odd) { /* <= Aplica a todos los <td> impares */
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+}
+
+#tabla-posiciones td:nth-of-type(even) span { /* <= Aplica a todos los <td> pares */
+	font-weight: 700;
+	color: #008899;
+}
+
