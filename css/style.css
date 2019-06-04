@@ -71,6 +71,11 @@ img {
 	padding: 10px;
 	margin: 10px;
 }
+
+.noticia:last-child {
+	border: none;
+}
+
 .noticia-img {
 	width: 30%;
 }
@@ -137,4 +142,10 @@ img {
 	font-weight: 700;
 	color: #008899;
 }
-
+footer {
+	background-color: #333333;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 15px;
+	margin-top: 30px;	
+}
