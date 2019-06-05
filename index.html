@@ -29,25 +29,25 @@
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ml-lg-auto text-center">
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-futbol"></i> Fútbol</a>
+            <a class="nav-link" href="https://es.wikipedia.org/wiki/F%C3%BAtbol"><i class="fas fa-futbol"></i> Fútbol</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-basketball-ball"></i> NBA</a>
+            <a class="nav-link" href="nba.html"><i class="fas fa-basketball-ball"></i> NBA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-baseball-ball"></i> Tenis</a>
+            <a class="nav-link" href="tenis.html"><i class="fas fa-baseball-ball"></i> Tenis</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-flag-checkered"></i> Fórmula 1</a>
+            <a class="nav-link" href="formula_1.html"><i class="fas fa-flag-checkered"></i> Fórmula 1</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-hand-rock"></i> Boxeo</a>
+            <a class="nav-link" href="boxeo.html"><i class="fas fa-hand-rock"></i> Boxeo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-medal"></i> JJOO</a>
+            <a class="nav-link" href="jjoo.html"><i class="fas fa-medal"></i> JJOO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-motorcycle"></i> Moto GP</a>
+            <a class="nav-link" href="moto_gp.html"><i class="fas fa-motorcycle"></i> Moto GP</a>
           </li>
         </ul>
       </div>
@@ -190,17 +190,39 @@
   			/* Fin cambiarLogo */
   		}
 
-  		function validarOpcion(evento){
+  		function validarOpcion(event){
+        event.preventDefault()
 
-  			let clickeado = evento.target;
+  			let clickeado = event.target;
+
+        console.log("El parametro magico es:")
+        console.log(event)
 
   			let rta = confirm(`Esta seguro que desea ir a ${clickeado.innerText}?`)
 
   			if( rta ){
   				alert("Ok, buen viaje...")
+          window.location = clickeado.href
   			}
 
   		}
+
+      function obtenerNoticias(){
+
+        let ajax = new XMLHttpRequest()
+        ajax.open("GET", "noticias.json")
+        ajax.onload = function(){
+
+          if( ajax.status == 200 ){ // <-- Respuesta Exitosa!
+
+            console.log( ajax.response )
+
+          }
+
+        }
+        ajax.send()
+      
+      }
   	</script>
   </body>
 </html>
