@@ -157,9 +157,6 @@ button {
 /* Ajustes Mobile con Media Queries */
 @media screen and (max-width: 576px){ /* <-- Smartphone */
 	/* Inicio Media Query */
-	body {
-		background-color: red;
-	}
 
 	nav {
 		display: none;
@@ -204,8 +201,6 @@ button {
 
 @media screen and (min-width: 577px) and (max-width: 768px){ /* <-- Tablet */
 
-	body {
-		background-color: green;
-	}
+
 
 }
