@@ -1,27 +1,46 @@
-let http = require("http")
-let fs = require("fs")
+const http = require("http");
+const fs = require("fs");
 
+http.createServer((request, response) => {
+		
+		let dir = "public/";
 
+		let file = (request.url == "/") ? "index.html" : request.url;
+			file = (file.match(/[^.]+(\.[^?#]+)?/) || [])[0];
+		
+		let ext = file.substring( file.lastIndexOf(".") ).toLowerCase();
 
+		let types = {
+			".html"	: "text/html",
+			".js"	: "text/javascript",
+			".css"	: "text/css",
+			".txt" 	: "text/plain",
+			".json"	: "application/json",
+			".png"	: "image/png",
+			".jpg"	: "image/jpg",
+			".gif"	: "image/gif",
+			".ico"	: "image/x-icon",
+			".wav"	: "audio/wav",
+			".mp4"	: "video/mp4",
+			".woff"	: "application/font-woff",
+			".ttf"	: "application/font-ttf",
+			".eot"	: "application/vnd.ms-fontobject",
+			".otf"	: "application/font-otf",
+			".svg"	: "application/image/svg+xml"
+		};
 
-http.createServer(function(peticion, respuesta){
+		let contentType = types[ext] || "application/octet-stream";
 
-	let archivo = peticion.url //<-- /index.html
+		fs.readFile( dir + file, (error, content) => {
+			
+			if ( error ) {
+				response.writeHead(404, { "Content-Type" : "text/plain" } );
+				response.end("ARCHIVO NO ENCONTRADO");
+			} else {
+				response.writeHead(200, { "Content-Type" : contentType } );
+				response.end(content);
+			}
 
-	//archivo = archivo.substr(1)
+		});
 
-	fs.readFile("public" + archivo, function(error, file){
-
-		if( error ){
-
-			respuesta.end("404 - Archivo no encontrado :(")
-
-		} else {
-
-			respuesta.end(file)
-		}
-
-	})
-
-
-}).listen(80)
+}).listen(80);
