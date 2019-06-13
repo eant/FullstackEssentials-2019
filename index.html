@@ -10,7 +10,84 @@
 
     <title>DX - DeporteXtremo</title>
   </head>
-  <body>
+  <body class="pt-5 mt-2">
+    <!-- Inicio Navbar -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand font-weight-bold" href="#">
+        <img src="img/logo.png" width="50" class="d-inline-block align-middle" alt="">
+        <span class="align-middle">DeporteXtremo</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ml-auto text-center">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Fútbol <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">NBA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tenis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Formula 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Boxeo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">JJOO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Moto GP</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <!-- Fin Navbar -->
+
+    <!-- Inicio Slider -->
+    <div class="bd-example">
+      <div id="noticias-destacadas" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+
+          <figure class="carousel-item active">
+            <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
+            <figcaption class="carousel-caption d-block bg-dark position-static py-3 px-4 text-left">
+              <h2>Paris y Los Ángeles serán las próximas sedes de los Juegos Olímpicos</h2>
+            </figcaption>
+          </figure>
+
+          <figure class="carousel-item">
+            <img src="img/f1.jpg" class="d-block w-100" alt="...">
+            <figcaption class="carousel-caption d-block bg-dark position-static py-3 px-4 text-left">
+              <h2>Ricciardo marcó definitivamente el ritmo en los libres de Azerbaiyán</h2>
+            </figcaption>
+          </figure>
+
+          <figure class="carousel-item">
+            <img src="img/rally.jpg" class="d-block w-100" alt="...">
+            <figcaption class="carousel-caption d-block bg-dark position-static py-3 px-4 text-left">
+              <h2>En Córdoba arrancó la 1er etapa del 38° Rally de la Argentina</h2>
+            </figcaption>
+          </figure>
+          
+        </div>
+        <a class="carousel-control-prev" href="#noticias-destacadas" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#noticias-destacadas" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <!-- Fin Slider -->
     
     <main class="container-fluid">
 
@@ -34,7 +111,7 @@
           <!-- Fin Noticia #1 -->
         </div>
 
-        <div class="col-12 col-md-6 col-lg-6 col-xl-12">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2 col-xl-12">
           <!-- Incio Noticia #2 -->
           <article class="row">
 
@@ -52,7 +129,7 @@
           <!-- Fin Noticia #2 -->
         </div>
 
-        <div class="col-12 col-md-6 col-lg-6 col-xl-12">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-12">
           <!-- Incio Noticia #3 -->
           <article class="row">
 
