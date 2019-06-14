@@ -90,7 +90,7 @@
     <main class="container-fluid">
 
       <!-- Inicio Noticia #1 -->
-      <article class="row py-3 mx-3 border-bottom">
+      <article class="row py-3 mx-3 border-bottom d-none noticia">
         <div class="col-12 col-md-4">
           <img src="{{IMAGEN}}" class="img-fluid">
         </div>
@@ -169,18 +169,51 @@
   		}
 
       function obtenerNoticias(){
+        //debugger //<-- Esto es "MAGICO"!!!
 
         let ajax = new XMLHttpRequest()
-        ajax.open("GET", "noticias.json")
+        //ajax.open("GET", "noticias.json")
+        
+        //ajax.open("GET", "https://api.sheety.co/d721efbb-a4fd-4a66-84a5-f80b3fa04bea")
+        
+        ajax.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.clarin.com%2Frss%2Fdeportes%2F")
+        
         ajax.onload = function(){
 
           if( ajax.status == 200 ){ // <-- Respuesta Exitosa!
-
+            /*
             console.log("ANTES DEL PARSEO")
             console.log( ajax.response )
 
             console.log("DESPUES DEL PARSEO")
             console.log( JSON.parse(ajax.response) )
+            */
+            let noticias = JSON.parse(ajax.response)
+
+            //console.table(noticias)
+
+            noticias.items.forEach(function(noticia){
+              /*
+              console.log(`El titulo es: ${noticia.titulo}`)
+              console.log(`El autor es: ${noticia.autor}`)
+              console.log("------")
+              */
+              let article = document.querySelector(".noticia").cloneNode(true)
+
+              article.querySelector("h3").innerText = noticia.title
+              article.querySelector("strong").innerText = noticia.author
+              article.querySelector("p:nth-of-type(2)").innerText = noticia.description
+              article.querySelector("img").src = noticia.enclosure.link
+
+              article.classList.remove("d-none")
+
+              console.log(article)
+
+              document.querySelector("main").appendChild( article )
+
+            })
+
+
 
           }
 
