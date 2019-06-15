@@ -1,6 +1,9 @@
 const http = require("http");
 const fs = require("fs");
 
+//const port = PUERTO_DE_HEROKU || PUERTO_MIO
+const port = process.env.port || 80
+
 http.createServer((request, response) => {
 		
 		let dir = "public/";
@@ -43,4 +46,4 @@ http.createServer((request, response) => {
 
 		});
 
-}).listen(80);
+}).listen(port);
