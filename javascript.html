@@ -1,0 +1,39 @@
+<script>
+	//debugger
+	/* Tipos de Datos Primitivos
+	let nombre = "Mate Cocido" //<-- String
+	let stock = 150            //<-- Int
+	let precio = 45.60         //<-- Float
+	let disponible = true      //<-- Bool
+	*/
+
+	/*
+		Origen de los Datos:
+		- Determinado: estan definidos por el programador (hardcodeado)
+		- Indeterminado: pueden ser definidos por...
+			* Operacion Matematica/Logica
+			* Interaccion del usuario
+	*/
+
+	//1) Introduccion
+	let nombre = prompt("Ingrese nombre:")
+	let stock = prompt("Ingrese stock:")
+	let precio = prompt("Ingrese precio:")
+	let disponible = confirm("Esta disponible?")
+
+	//2) Nudo
+	let precioFinal = precio * 1.21
+
+	if( nombre == "" ){ //<-- true/false
+		alert("ERROR: El nombre no puede quedar vacio...")
+	}
+
+	//window.alert( saludo )
+
+	//console.log( saludo )
+
+	//document.write("Hay " + stock + " unidades de " + nombre)
+	
+	//3) Desenlace
+	document.write(`<p>Hay ${stock} unidades de <strong>${nombre}</strong> y cuestan ARS ${precioFinal} c/u</p>`)
+</script>
