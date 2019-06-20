@@ -96,71 +96,7 @@
         
         <div class="row">
 
-          <div class="col-12 col-sm-6 col-md-12">
-          <!-- Noticia #1 -->
-            <article class="row">
-              <div class="col-12 col-md-3 col-lg-4">
-                <img src="img/sorteo-libertadores.jpg" class="img-fluid">
-              </div>
-              <div class="col-12 col-md-9 col-lg-8">
-                <h3>La tecnología llega a la actual edición de la Libertadores</h3>
-                <p>por Joaquín Angeli</p>
-                <p>La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.</p>
-              </div>
-            </article>
-          <!-- Fin Noticia #1 -->
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-12">
-          <!-- Noticia #2 -->
-            <article class="row">
-              <div class="col-12 col-md-3 col-lg-4">
-                <img src="img/tickets-rusia-mundial.jpg" class="img-fluid">
-              </div>
-              <div class="col-12 col-md-9 col-lg-8">
-                <h3>Comenzó la venta de entradas para el Mundial de Rusia 2018</h3>
-                <p>por Laura Smasnatta</p>
-                <p>Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'.</p>
-              </div>
-            </article>
-          <!-- Fin Noticia #2 -->
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-12">
-          <!-- Noticia #3 -->
-            <article class="row">
-              <div class="col-12 col-md-3 col-lg-4">
-                <img src="img/firpo.jpg" class="img-fluid">
-              </div>
-              <div class="col-12 col-md-9 col-lg-8">
-                <h3>A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo</h3>
-                <p>por Diego Di Marco</p>
-                <p>El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia.</p>
-              </div>
-            </article>
-          <!-- Fin Noticia #3 -->
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-12">
-          <!-- Noticia #4 -->
-            <article class="row">
-              <div class="col-12 col-md-3 col-lg-4">
-                <img src="img/buenos-aires.jpg" class="img-fluid">
-              </div>
-              <div class="col-12 col-md-9 col-lg-8">
-                <h3>Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI</h3>
-                <p>por Melina Morales</p>
-                <p>El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre.</p>
-              </div>
-            </article>
-          <!-- Fin Noticia #4 -->
-          </div>
-
         </div>
-
-
-
-
 
       </section>
 
@@ -175,6 +111,35 @@
   		//Aca voy a hacer magia
   		/* Manipulacion "masiva" del DOM */
   		let links = document.querySelectorAll(".nav-link")
+
+  		let noticia1 = [
+  			"La tecnología llega a la actual edición de la Libertadores",
+  			"Joaquín Angeli",
+  			"La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores."
+  		]
+
+  		let noticia2 = [
+  			"Comenzó la venta de entradas para el Mundial de Rusia 2018",
+  			"Laura Smasnatta",
+  			"Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'"
+  		]
+
+  		let noticia3 = [
+  			"A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo",
+  			"por Diego Di Marco",
+  			"El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia."
+  		]
+
+  		let noticia4 = [
+  			"Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI",
+  			"Melina Morales",
+  			"El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre."
+  		]
+
+  		crearNoticia(noticia1[0], noticia1[1], noticia1[2])
+  		crearNoticia(noticia2[0], noticia2[1], noticia2[2])
+  		crearNoticia(noticia3[0], noticia3[1], noticia3[2])
+  		crearNoticia(noticia4[0], noticia4[1], noticia4[2])
 
   		//Comportamiento
   		//links[0].onclick = validarLink
@@ -192,6 +157,34 @@
 
   		function validarLink(){
 			confirm("Esta seguro que desea irse?")
+  		}
+
+  		function crearNoticia(titulo, autor, detalle){ //<-- Argumentos
+  			console.log("El argumento 'titulo' es: " + titulo)
+  			console.log("El argumento 'autor' es: " + autor)
+  			console.log("El argumento 'detalle' es: " + detalle)
+  			console.log("---")
+
+  			let noticia = document.createElement("div")
+  			noticia.classList.add("col-12", "col-sm-6", "col-md-12")
+
+  			let contenido = `<article class="row">
+  								<div class="col-12 col-md-3 col-lg-4">
+                					<img src="img/sorteo-libertadores.jpg" class="img-fluid">
+              					</div>
+					            <div class="col-12 col-md-9 col-lg-8">
+					              <h3>${titulo}</h3>
+					              <p>por ${autor}</p>
+					              <p>${detalle}</p>
+					            </div>
+					         </article>`
+
+			noticia.innerHTML = contenido
+
+  			console.log( noticia )
+
+  			document.querySelector("#ultimas-noticias .row").appendChild( noticia )
+
   		}
 
   	</script>
