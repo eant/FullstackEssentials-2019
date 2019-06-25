@@ -112,34 +112,15 @@
   		/* Manipulacion "masiva" del DOM */
   		let links = document.querySelectorAll(".nav-link")
 
-  		let noticia1 = [
-  			"La tecnología llega a la actual edición de la Libertadores",
-  			"Joaquín Angeli",
-  			"La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores."
-  		]
+  		let ajax = new XMLHttpRequest()
+  		ajax.open("GET", "noticias.json")
+  		ajax.onload = ????
+  		ajax.send()
 
-  		let noticia2 = [
-  			"Comenzó la venta de entradas para el Mundial de Rusia 2018",
-  			"Laura Smasnatta",
-  			"Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'"
-  		]
-
-  		let noticia3 = [
-  			"A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo",
-  			"por Diego Di Marco",
-  			"El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia."
-  		]
-
-  		let noticia4 = [
-  			"Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI",
-  			"Melina Morales",
-  			"El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre."
-  		]
-
-  		crearNoticia(noticia1[0], noticia1[1], noticia1[2])
-  		crearNoticia(noticia2[0], noticia2[1], noticia2[2])
-  		crearNoticia(noticia3[0], noticia3[1], noticia3[2])
-  		crearNoticia(noticia4[0], noticia4[1], noticia4[2])
+  		crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
+  		crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
+  		crearNoticia(noticia3.titulo, noticia3.autor, noticia3.detalle, noticia3.imagen)
+  		crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
 
   		//Comportamiento
   		//links[0].onclick = validarLink
@@ -159,7 +140,7 @@
 			confirm("Esta seguro que desea irse?")
   		}
 
-  		function crearNoticia(titulo, autor, detalle){ //<-- Argumentos
+  		function crearNoticia(titulo, autor, detalle, imagen){ //<-- Argumentos
   			console.log("El argumento 'titulo' es: " + titulo)
   			console.log("El argumento 'autor' es: " + autor)
   			console.log("El argumento 'detalle' es: " + detalle)
@@ -170,7 +151,7 @@
 
   			let contenido = `<article class="row">
   								<div class="col-12 col-md-3 col-lg-4">
-                					<img src="img/sorteo-libertadores.jpg" class="img-fluid">
+                					<img src="img/${imagen}" class="img-fluid">
               					</div>
 					            <div class="col-12 col-md-9 col-lg-8">
 					              <h3>${titulo}</h3>
