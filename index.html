@@ -114,7 +114,12 @@
 
   		let ajax = new XMLHttpRequest()
   		ajax.open("GET", "noticias.json")
-  		ajax.onload = ????
+  		ajax.onload = function(){ //<-- Funciones Anonimas
+        //Aca hay que hacer algo con el JSON...
+        if( ajax.status == 200 ){ //<-- Respuesta Exitosa!
+          console.log( ajax.response )
+        }
+      }
   		ajax.send()
 
   		crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
@@ -136,7 +141,7 @@
   			links[i].onclick = validarLink
   		}
 
-  		function validarLink(){
+  		function validarLink(){ //<-- Funcion Nominada
 			confirm("Esta seguro que desea irse?")
   		}
 
@@ -167,7 +172,6 @@
   			document.querySelector("#ultimas-noticias .row").appendChild( noticia )
 
   		}
-
   	</script>
   </body>
 </html>
