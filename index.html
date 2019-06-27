@@ -126,8 +126,7 @@
           let noticias = JSON.parse(ajax.response)
 
           noticias.forEach(function(noticia){ //<-- callback
-            console.log("Aca va una noticia:")
-            console.log( noticia )
+            crearNoticia(noticia.titulo, noticia.autor, noticia.detalle, noticia.imagen)
           }) 
 
         }
@@ -135,10 +134,10 @@
       }
   		ajax.send()
 
-  		crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
-  		crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
-  		crearNoticia(noticia3.titulo, noticia3.autor, noticia3.detalle, noticia3.imagen)
-  		crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
+  		//crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
+  		//crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
+  		//crearNoticia(noticia3.titulo, noticia3.autor, noticia3.detalle, noticia3.imagen)
+  		//crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
 
   		//Comportamiento
   		//links[0].onclick = validarLink
