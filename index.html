@@ -118,11 +118,18 @@
         
         //Aca hay que hacer algo con el JSON...
         if( ajax.status == 200 ){ //<-- Respuesta Exitosa!
-          console.log("Antes del parseo:")
-          console.log( ajax.response )
+          //console.log("Antes del parseo:")
+          //console.log( ajax.response )
 
-          console.log("Despues del parseo:")
-          console.log( JSON.parse(ajax.response) )
+          //console.log("Despues del parseo:")
+          //console.log( JSON.parse(ajax.response) )
+          let noticias = JSON.parse(ajax.response)
+
+          noticias.forEach(function(noticia){ //<-- callback
+            console.log("Aca va una noticia:")
+            console.log( noticia )
+          }) 
+
         }
 
       }
