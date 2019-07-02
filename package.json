@@ -1,0 +1,25 @@
+{
+  "name": "pwfe-m1-06",
+  "version": "1.0.0",
+  "description": "A partir de ahora podrás tener el control de todos los cambios y actualizaciones de tu proyecto\r ## En caso de incendio:\r 1. git commit\r 2. git push\r 3. salir del edificio",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "^0.0.0",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eant/PWFE-M1-06.git"
+  },
+  "author": "SM - Silvio Messina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eant/PWFE-M1-06/issues"
+  },
+  "homepage": "https://github.com/eant/PWFE-M1-06#readme"
+}
