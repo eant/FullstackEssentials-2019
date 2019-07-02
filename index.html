@@ -146,7 +146,7 @@
       ///////////////////////////////////////////
       /* Interfaz dinámica: Generador de Noticias */
       let ajax = new XMLHttpRequest()
-      ajax.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.clarin.com%2Frss%2Fdeportes%2F")
+      ajax.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fep00.epimg.net%2Frss%2Fdeportes%2Fportada.xml")
       ajax.onload = function(){ //<-- Funciones Anonimas
         if( ajax.status == 200 ){ //<-- Respuesta Existosa!
 
