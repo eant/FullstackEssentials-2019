@@ -1,0 +1,52 @@
+.article {
+  background-color: white;
+  border-left: 1px solid #a7d7f9;
+  height: 100%;
+  padding: 20px;
+}
+
+.article__text {
+  line-height: 1.6;
+  font-size: 0.875em;
+  color: #222222;
+}
+
+.article__title h1 {
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.article__container {
+  display: flex;
+}
+
+.article__table {
+  border: 1px solid #b4bbc8;
+  background-color: #f9f9f9;
+  color: #000;
+  margin: 0.5em 0 0.7em 1.2em;
+  padding: 0.4em;
+  clear: right;
+  float: right;
+  font-size: 90%;
+  line-height: 1.5em;
+  width: 22.5em;
+}
+
+.article__table__header {
+  background-color: #dceaec !important;
+  color: black;
+  font-size: 140%;
+  font-weight: bolder;
+  height: 45px;
+  line-height: 1.2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.article__table__header.info {
+  background: url("../img/Picto-infoboxinfo.png") no-repeat top right;
+}
+
+.article__table__content {
+  text-align: center;
+}
