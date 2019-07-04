@@ -1,6 +1,8 @@
 const http = require("http");
 const fs = require("fs");
 
+const port = process.env.PORT || 80
+
 http.createServer((request, response) => {
 		
 		let dir = "public/";
@@ -45,4 +47,4 @@ http.createServer((request, response) => {
 
 		});
 
-}).listen(80);
+}).listen(port);
