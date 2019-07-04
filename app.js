@@ -1,7 +1,7 @@
 let http = require("http")
 let fs = require("fs")
 
-let port = 80
+let port = process.env.PORT || 80 
 
 http.createServer(function(request, response){
 		
