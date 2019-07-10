@@ -113,7 +113,7 @@
   		let links = document.querySelectorAll(".nav-link")
 
   		let ajax = new XMLHttpRequest()
-  		ajax.open("GET", "noticias.json")
+  		ajax.open("GET", "https://api.sheety.co/c9f520ee-97ce-4a4a-ae0d-0ee2c6b70e94")
   		ajax.onload = function(){ //<-- Funciones Anonimas
         
         //Aca hay que hacer algo con el JSON...
@@ -168,7 +168,7 @@
 
   			let contenido = `<article class="row">
   								<div class="col-12 col-md-3 col-lg-4">
-                					<img src="img/${imagen}" class="img-fluid">
+                					<img src="${imagen}" class="img-fluid">
               					</div>
 					            <div class="col-12 col-md-9 col-lg-8">
 					              <h3>${titulo}</h3>
