@@ -1,0 +1,48 @@
+:root {
+  --image-width: 300px;
+  --margin: 10px;
+}
+
+.nota__image,
+.text-container {
+  margin: 0;
+  margin-left: var(--margin);
+  display: inline-block;
+}
+
+.nota__image,
+.nota__image img {
+  width: var(--image-width);
+}
+
+.text-container {
+  float: right;
+  width: calc(100% - (var(--margin) * 2) - var(--image-width));
+}
+
+.text-container__title {
+  margin-top: 0;
+}
+
+.text-container__description::first-letter {
+  font-weight: bold;
+}
+
+.elipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .nota__image img {
+    width: 100%;
+    margin: 0;
+  }
+  .nota__image,
+  .text-container {
+    margin: auto 0;
+    display: block;
+    width: 100%;
+  }
+}

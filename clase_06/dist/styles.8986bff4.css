@@ -1,0 +1,42 @@
+:root {
+  --my-color: red;
+}
+
+.highlight {
+  background-color: #5bc8f7;
+}
+
+.highlight::after,
+.highlight::before {
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
+}
+
+.highlight::before {
+  content: "«";
+}
+
+.highlight::after {
+  content: "»";
+}
+
+.title:empty::after {
+  content: url("/ghost.696e453f.svg");
+}
+
+.title:empty {
+  width: 200px;
+}
+
+.title:not(:empty) {
+  border: 1px solid var(--my-color);
+}
+
+p::selection {
+  background-color: black;
+  color: green;
+}
+
+
+/*# sourceMappingURL=/styles.8986bff4.css.map */
