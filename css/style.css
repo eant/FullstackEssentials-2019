@@ -1,0 +1,49 @@
+/* Estilos Generales */
+/*
+	Anatomia de una regla CSS
+
+selector {
+	propiedad: valor;
+	propiedad: valor;
+	propiedad: valor;
+}
+*/
+body {
+	font-family: "Helvetica", "Arial", "Open Sans", sans-serif;
+	font-size: 18px;
+	color: #2f2c2c;
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #808080;
+}
+h1 {
+	font-family: "Tahoma";
+	color: darkviolet;
+	font-size: 22px;
+	text-transform: uppercase;
+	text-align: center;
+}
+span {
+	color: red;
+	font-style: italic;
+}
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+	background-color: #2f2c2c;
+	padding-left: 10px;
+	padding-right: 10px; 
+}
+a:hover {
+	color: #2f2c2c;
+	background-color: #FFFFFF;
+}
+p {
+	text-align: justify;
+	line-height: 1.5;
+}
+img {
+	margin-left: auto;
+	display: block;
+}
