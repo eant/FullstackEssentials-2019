@@ -47,3 +47,11 @@ img {
 	margin-left: auto;
 	display: block;
 }
+#foto-polaroid {
+	margin: 15px auto 15px auto;
+	width: 150px;
+	border-top: solid 15px #FFFFFF;
+	border-left: solid 15px #FFFFFF;
+	border-right: solid 15px #FFFFFF;
+	border-bottom: solid 45px #FFFFFF;
+}
