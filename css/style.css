@@ -44,6 +44,15 @@ img {
   display: block;
   width: 100%;
 }
+#noticias-destacadas {
+  width: calc(100vw * 3);
+  overflow: hidden;
+  background-color: #171717;
+}
+#noticias-destacadas figure {
+  width: 100vw;
+  float: left;
+}
 #noticias-destacadas h2 {
   font-size: 42px;
   font-weight: 600;
