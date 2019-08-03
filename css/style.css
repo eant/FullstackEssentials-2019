@@ -40,3 +40,14 @@ header ul li {
 header nav {
   float: right;
 }
+img {
+  display: block;
+  width: 100%;
+}
+#noticias-destacadas h2 {
+  font-size: 42px;
+  font-weight: 600;
+  background-color: #171717;
+  padding: 15px;
+  color: #FFF;
+}
