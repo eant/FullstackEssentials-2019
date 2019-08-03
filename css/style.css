@@ -2,6 +2,7 @@ body {
   font-family: "Arial";
   font-size: 14px;
   margin: 0;
+  overflow-x: hidden;
 }
 header {
   background-color: #171717;
@@ -48,6 +49,8 @@ img {
   width: calc(100vw * 3);
   overflow: hidden;
   background-color: #171717;
+  position: relative;
+  animation: 15s slider infinite;
 }
 #noticias-destacadas figure {
   width: 100vw;
@@ -59,4 +62,28 @@ img {
   background-color: #171717;
   padding: 15px;
   color: #FFF;
+}
+
+/* Animaciones CSS */
+@keyframes slider {
+
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  40% {
+    left: -100vw;
+  }
+  60% {
+    left: -100vw;
+  }
+  80% {
+    left: -200vw;
+  }
+  100% {
+    left: -200vw;
+  }
+
 }
