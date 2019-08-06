@@ -1,3 +1,6 @@
+* {
+	outline: dotted 1px red;
+}
 body {
 	font-family: "Arial";
 	font-size: 14px;
@@ -53,7 +56,7 @@ img {
 	background-color: #171717;
 	overflow: hidden;
 	position: relative;
-	animation: 15s slider infinite;
+	animation: 0s slider infinite;
 }
 #noticias-destacadas figure {
 	width: 100vw;
@@ -68,6 +71,23 @@ img {
 	font-size: 42px;
 	font-weight: 700;
 }
+.noticia {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly; /* flex-start | center | flex-end | space-between | space-around | space-evenly */
+	align-items: center; /* flex-start | center | flex-end | stretch */
+}
+.noticia-img {
+	width: 30%;
+}
+.noticia-txt {
+	width: 60%;
+	background-color: orange;
+}
+
+
+
+
 
 
 /* Animaciones CSS */
