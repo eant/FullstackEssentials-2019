@@ -69,6 +69,19 @@ img {
   color: #FFF;
 }
 
+.noticia { /* ← Contenedor Flexible */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; /* flex-start | center | flex-end | space-around | space-between | space-evenly */
+  align-items: center; /* flex-start | center | flex-end | strech */
+}
+.noticia-img { /* ← Item Flexible */
+  width: 25%;
+}
+.noticia-txt { /* ← Item Flexible */
+  width: 65%;
+}
+
 /* Animaciones CSS */
 @keyframes slider {
 
