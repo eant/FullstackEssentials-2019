@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/normalize.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/extra.css">
+		<title>Aprender a programar con JavaScript</title>		
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="ejercicio_1.html" class="active">Ejercicio 1</a>
+				<a href="ejercicio_2.html">Ejercicio 2</a>
+				<a href="ejercicio_3.html">Ejercicio 3</a>
+				<a href="ejercicio_4.html">Ejercicio 4</a>
+				<a href="ejercicio_5.html">Ejercicio 5</a>
+				<a href="ejercicio_6.html">Ejercicio 6</a>
+				<a href="ejercicio_7.html">Ejercicio 7</a>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Aprender a programar con JavaScript</h1>
+		</section>
+
+		<aside>
+			<p>Crear un "asistente" que pida los siguientes datos de un producto:</p>
+			<ul>
+				<li>Nombre</li>
+				<li>Stock</li>
+				<li>Precio</li>
+				<li>Disponibilidad</li>
+			</ul>
+			<p>Mostrar un mensaje en el <code>&lt;article&gt;</code> que indique el cuanto valen y cuantas unidades hay de ese producto.</p>
+			<article>
+
+			</article>
+		</aside>
+
+		<script>
+			/*
+			Leccion 1:
+				- Tipos Primitivos
+				- Datos de Origen Determinado (hardcodeado)
+				- Datos de Origen Indeterminado
+			var nombre = "Cafe"    // string
+			var stock = 500        // int (integer)
+			var precio = 85.60     // float
+			var disponible = false // bool
+
+			var precioFinal = precio * 1.21 //... determinable luego de una operacion logica/matematica
+
+			console.log(nombre)
+			console.log(stock)
+			console.log(precio)
+			console.log(disponible)
+			*/
+
+			/*
+				Leccion 2:
+				- Datos de Origen Indeterminado... determinable por el usuario
+				- Combinacion de datos "estaticos" y "dinamicos"
+			*/
+
+			//1) Introduccion
+			var nombre = prompt("Ingrese nombre:")
+			var stock = prompt("Ingrese stock:")
+			var precio = prompt("Ingrese precio:")
+			var disponible = confirm("Esta disponible para la venta?")
+
+			//2) Nudo		  	
+		  	var precioFinal = precio * 1.21
+
+		  	if( nombre == "" ){
+		  		alert("ERROR: El nombre no puede quedar vacio ò_ó")
+		  	}
+
+		  	//var mensaje = "Hay " + stock + " unidades de " + nombre + " que valen " + precio
+			var mensaje = `<p>Hay ${stock} unid. de <strong>${nombre}</strong> que cuestan ${precioFinal} c/u</p>`
+
+			/*
+				Leccion 3:
+				- Visualizacion de los datos
+				- Integracion JS + HTML
+			*/
+
+			//3) Desenlace
+			document.querySelector("article").innerHTML = mensaje
+
+		</script>
+	</body>
+</html>
