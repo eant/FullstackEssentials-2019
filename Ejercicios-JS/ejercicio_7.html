@@ -58,6 +58,7 @@
 		</aside>
 
 		<script>
+			//debugger
 			/* 1) Seleccionar todas las habitaciones */
 			let habitaciones = document.querySelectorAll(".habitacion")
 
@@ -72,19 +73,34 @@
 			//habitaciones[1].classList.add("esconder")
 			//habitaciones[2].classList.add("esconder")
 
-			for(let i = 0; i < habitaciones.length; i++){
-				console.log("Soy la vuelta nro: " + i)
-				habitaciones[i].classList.add("esconder")
+			esconderTodo() //<-- cuando se carga el HTML
+
+			//window.onload = esconderTodo //<-- cuando se carga TODO el documento y sus recursos
+
+			function esconderTodo(){
+				for(let i = 0; i < habitaciones.length; i++){
+					console.log("Soy la vuelta nro: " + i)
+					habitaciones[i].classList.add("esconder")
+				}
 			}
 
-
 			function mostrarOpcion(){
+				//debugger
+				esconderTodo() //<-- Callback
 				/* 5) Obtener la opción seleccionada */
+				let elegida = menu.value
+
+				//alert("La opcion elegida es: " + elegida)
 
 				/* 6) Seleccionar la habitación correspondiente usando un selector dinámico */
+				if( elegida == 0 ) return //<-- Salir de la funcion
 
-				/* 7) Asignar la clase correspondiente */
-				
+				let habitacionElegida = document.querySelector(`.habitacion-${elegida}`)
+
+				console.log(habitacionElegida)
+
+				/* 7) Remover la clase correspondiente */
+				habitacionElegida.classList.remove("esconder")
 			}
 		</script>
 	</body>
