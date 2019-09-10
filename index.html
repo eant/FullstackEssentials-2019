@@ -234,6 +234,14 @@
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+			let ajax = new XMLHttpRequest()
+			ajax.open("GET", "https://reqres.in/api/users?page=2")
+			ajax.onload = function(){ //<-- hacer esto...
+				console.log( ajax.response )
+			}
+			//ajax.send()
+		</script>
 	</body>
 
 </html>
