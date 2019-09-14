@@ -7,10 +7,21 @@ links.forEach(function(link){ // ← Funcion Anónima
   console.log(link)
 
   link.onclick = function(evento){ // ← Hacer esto...
-    evento.preventDefault()
-    console.log(evento)
-
+    evento.preventDefault() // ← detener el comportamineto predeterminado
+    
     var rta = confirm("Esta seguro que desea abandonar la pagina?")
+
+    if( rta ){
+      //Ir a la pagina correspondiente
+      console.log("Ahora deberia ir a:")
+      console.log(evento.target.href)
+
+      window.location.href = evento.target.href // ← Ir a donde iría el elemento clickeado...
+
+
+    } else {
+      alert("gracias por quedarse!")
+    }
 
 
 
