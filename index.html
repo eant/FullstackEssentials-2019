@@ -234,6 +234,14 @@
 		<script src="js/jquery-3.3.1.slim.min.js"></script>
 		<script src="js/popper.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+			var ajax = new XMLHttpRequest()
+			ajax.open("GET", "noticias.json")
+			ajax.onload = function(){
+				console.log( ajax.response )
+			}
+			//ajax.send()
+		</script>
 	</body>
 
 </html>
