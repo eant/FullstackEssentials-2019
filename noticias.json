@@ -1,0 +1,74 @@
+{ "noticias":
+	[
+		{
+			"noticia":1, 
+			"img":"img/sorteo-libertadores.jpg",
+			"titulo": "La tecnología llega a la actual edición de la Libertadores",
+			"autor": "Joaquín Angeli",
+			"detalle":"La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores"
+		},
+		{
+			"noticia":2, 
+			"img":"img/tickets-rusia-mundial.jpg",
+			"titulo": "Comenzó la venta de entradas para el Mundial de Rusia 2018",
+			"autor": "Laura Smasnatta",
+			"detalle":"Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'"
+		},
+		{
+			"noticia":3,
+			"img":"img/firpo.jpg", 
+			"titulo": "A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo",
+			"autor": "Diego Di Marco",
+			"detalle":"El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia."
+			},
+		{
+			"noticia":4, 
+			"img":"img/buenos-aires.jpg",
+			"titulo": "Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI",
+			"autor": "Melina Morales",
+			"detalle":"El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre."
+		},
+		{
+			"noticia":5,
+			"img":"https://d3glgrw24fnm6k.cloudfront.net/wp-content/uploads/2019/09/Pasaporte-a-Tokio-2020-710x470-c-center.jpg",
+			"titulo": "Pasaporte a Tokio 2020",
+			"autor": "Roberto Morcillo",
+			"detalle":"La victoria de EEUU sobre Brasil, sumada a los resultados del seleccionado argentino, nos dejaron clasificados a Tokio 2020."
+		},
+		{
+			"noticia":6, 
+			"img":"img/messi.jpg",
+			"titulo": "Messi, el mejor",
+			"autor": "Roberto Morcillo",
+			"detalle":"Nuevamente, Lionel Messi fue elegido como el mejor delantero de Europa. Lo que muestra que el argentino sigue siendo el preferido de los técnicos del mundo."
+		},
+		{
+			"noticia":7,
+			"img":"img/nicolino.jpg",
+			"titulo": "“El intocable”",
+			"autor": "Roberto Morcillo",
+			"detalle":"Tuve la gran suerte de verlo boxear. Fue único. Al día de hoy, sigue siendo único. Los demolía psíquicamente. Fue El intocable Nicolino Locche."
+		},
+		{
+			"noticia":8,
+			"img":"img/vargas.jpg",
+			"titulo": "Vargas campeona en racketball",
+			"autor": "Mariano Morales",
+			"detalle":"María José Vargas derrotó 2-1 a la mexicana Paola Longoria en la final del LRPT by the Beach Chesapeake 2019, competencia del circuito profesional femenino."
+		},
+		{
+			"noticia":9, 
+			"img": "img/soledad.jpg",
+			"titulo": "Vinieron de Harvard y crearon una plaza donde había un páramo",
+			"autor": "Paulina",
+			"detalle":"Stefano Romagnoli y Soledad Patiño cursan maestrías en Estados Unidos. Dirigen un proyecto comunitario en barrio Atalaya."
+		},
+		{
+			"noticia":10,
+			"img":"https://d3glgrw24fnm6k.cloudfront.net/wp-content/uploads/2019/09/Si-nos-ordenamos...-ganamos-todos-710x470-c-center.jpg",
+			"titulo": "Si nos ordenamos… ganamos todos",
+			"autor": "Bob Ventura",
+			"detalle":"No cabe dudas de que los japoneses son un pueblo a imitar. Su evolución como país se ha sustentado en la educación. Algo de lo que adolescemos nosotros."
+		}
+	]
+}
