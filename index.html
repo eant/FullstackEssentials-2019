@@ -236,11 +236,45 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script>
 			let ajax = new XMLHttpRequest()
+			//1) Obtener los datos...
 			ajax.open("GET", "https://reqres.in/api/users?page=2")
-			ajax.onload = function(){ //<-- hacer esto...
-				console.log( ajax.response )
+			ajax.onload = function(){ //<-- hacer esto... (peticion exitosa!)
+
+				if( ajax.status == 200 ){ //<-- respuesta exitosa!
+
+					//2) Convertir los datos
+					console.log("Antes del parseo:")
+					console.log( ajax.response ) //<-- JSON plano...
+
+					console.log("Despues del parseo:")
+					let usuarios = JSON.parse(ajax.response)
+					console.log( usuarios ) //<-- ...de JSON a Object
+
+					//3) Procesar los datos
+					usuarios.data.forEach(function(usuario){
+						//4) Hacer uso de los datos individualizados
+						console.log(`Hola, soy ${usuario.first_name} ${usuario.last_name} y mi correo es ${usuario.email}`)
+
+					})
+
+
+				} else { //<-- respuesta NO existosa! (ej: 404 - Pagina no encontrada)
+					ajax.onerror()
+				}
+
 			}
-			//ajax.send()
+			ajax.onerror = function(){ //<-- hacer esto... (peticion NO exitosa!)
+				alert("Datos no disponibles 😭")
+			}
+			ajax.send()
+			/////////////////////////////////////////////////////////
+
+			let noticia = ["La tecnología llega a la actual edición de la Libertadores", "Joaquín Angeli", "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores"]
+			let noticia2 = {
+				titulo : "Comenzó la venta de entradas para el Mundial de Rusia 2018",
+				autor : "Laura Smasnatta",
+				detalle : "Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'"
+			}
 		</script>
 	</body>
 
