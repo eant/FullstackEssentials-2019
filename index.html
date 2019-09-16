@@ -247,13 +247,14 @@
 					console.log( ajax.response ) //<-- JSON plano...
 
 					console.log("Despues del parseo:")
-					let usuarios = JSON.parse(ajax.response)
-					console.log( usuarios ) //<-- ...de JSON a Object
+					let datos = JSON.parse(ajax.response)
+					console.log( datos ) //<-- ...de JSON a Object
 
 					//3) Procesar los datos
-					usuarios.data.forEach(function(usuario){
+					datos.noticias.forEach(function(item){
 						//4) Hacer uso de los datos individualizados
-						console.log(`Hola, soy ${usuario.first_name} ${usuario.last_name} y mi correo es ${usuario.email}`)
+						//console.log(`Hola, soy ${usuario.first_name} ${usuario.last_name} y mi correo es ${usuario.email}`)
+						console.log(`Noticia del día: ${item.titulo} por ${item.autor}`)
 
 					})
 
