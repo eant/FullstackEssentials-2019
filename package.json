@@ -1,0 +1,22 @@
+{
+  "name": "simplenodejs",
+  "version": "1.0.0",
+  "description": "Servidor de archivos estáticos simple en Node.js (sin frameworks)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smessina/simplenodejs.git"
+  },
+  "author": "Silvio Messina",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/smessina/simplenodejs/issues"
+  },
+  "homepage": "https://github.com/smessina/simplenodejs#readme",
+  "dependencies": {
+    "nodemon": "^1.19.2"
+  }
+}

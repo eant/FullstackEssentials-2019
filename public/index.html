@@ -238,9 +238,22 @@
 			var ajax = new XMLHttpRequest()
 			ajax.open("GET", "noticias.json")
 			ajax.onload = function(){
-				console.log( ajax.response )
+
+				if( ajax.status == 200 ){ // ← respuesta exitosa!
+					console.log("Antes del parseo:")
+					console.log( ajax.response )
+
+					var noticias = JSON.parse( ajax.response ) // ← Convertir de JSON a Object
+
+					console.log("Despues del parseo:")
+					console.log( noticias )
+
+				} else {
+					alert("Datos no disponibles :(")
+				}
+
 			}
-			//ajax.send()
+			ajax.send()
 		</script>
 	</body>
 
