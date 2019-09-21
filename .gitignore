@@ -1,0 +1,8 @@
+node_modules/
+*.db
+*.tmp
+.DS_STORE
+*.ini
+*.exe
+*.env
+*.docx
