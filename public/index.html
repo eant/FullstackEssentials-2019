@@ -186,7 +186,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script>
 			var ajax = new XMLHttpRequest()
-			ajax.open("GET", "noticias.json")
+			ajax.open("GET", "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURI("https://www.ambito.com/rss/deportes.xml"))
 			ajax.onload = function(){
 
 				if( ajax.status == 200 ){ // ← respuesta exitosa!
@@ -198,7 +198,7 @@
 					console.log("Despues del parseo:")
 					console.log( noticias )
 
-					noticias.forEach( crearNoticia )
+					noticias.items.forEach( crearNoticia )
 
 				} else {
 					alert("Datos no disponibles :(")
@@ -213,9 +213,10 @@
 
 				var ficha = document.querySelector(".noticia").cloneNode(true)
 
-				ficha.querySelector("h3").innerText = item.titulo
-				ficha.querySelector("a").innerText = item.autor
-				ficha.querySelector("p:last-child").innerText = item.detalle
+				ficha.querySelector("h3").innerText = item.title
+				ficha.querySelector("a").innerText = item.author
+				ficha.querySelector("p:last-child").innerText = item.description
+				ficha.querySelector("img").src = item.thumbnail || item.enclosure.link || "https://lorempixel.com/480/320/sports"
 
 				ficha.classList.remove("d-none")
 

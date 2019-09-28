@@ -1,7 +1,7 @@
 const http = require("http")
 const fs = require("fs")
 
-const port = 4000
+const port = process.env.PORT || 4000
 
 http.createServer((request, response) => {
 		
