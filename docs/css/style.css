@@ -1,0 +1,27 @@
+:root {
+	font-size: 62.5%;
+}
+* {
+	outline: dotted 1px red;
+}
+body {
+	font-family: "Helvetica", "Arial", "Open Sans", sans-serif;
+	color: #333;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+header {
+	background-color: #333;
+}
+header h1, header a {
+	color: #D9D9D9;
+}
+header h1 {
+	font-size: 2.4rem;
+	margin: 0;
+}
+header a {
+	font-size: 1.6rem;
+}
