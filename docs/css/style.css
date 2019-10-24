@@ -8,12 +8,15 @@ body {
 	font-family: "Helvetica", "Arial", "Open Sans", sans-serif;
 	color: #333;
 	margin: 0;
+	/*background-image: url("https://st2.depositphotos.com/1785475/7603/v/950/depositphotos_76031891-stock-illustration-cube-light-pattern-background-vector.jpg");*/
 }
 a {
 	text-decoration: none;
 }
 header {
 	background-color: #333;
+	overflow: auto;
+	padding: 1.5rem;
 }
 header h1, header a {
 	color: #D9D9D9;
@@ -21,7 +24,32 @@ header h1, header a {
 header h1 {
 	font-size: 2.4rem;
 	margin: 0;
+	float: left;
+	font-weight: bold;
+	padding: .5rem;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 8rem;
 }
 header a {
 	font-size: 1.6rem;
 }
+nav {
+	float: right;
+}
+nav li {
+	display: inline-block;
+	margin: .5rem;
+}
+nav li a {
+	display: block;
+	padding: .5rem;
+}
+
+
+
+
+
+
+
