@@ -9,6 +9,7 @@ body {
 	color: #333;
 	margin: 0;
 	/*background-image: url("https://st2.depositphotos.com/1785475/7603/v/950/depositphotos_76031891-stock-illustration-cube-light-pattern-background-vector.jpg");*/
+	overflow-x: hidden;
 }
 a {
 	text-decoration: none;
@@ -47,9 +48,24 @@ nav li a {
 	padding: .5rem;
 }
 
-
-
-
-
+img {
+	display: block;
+	width: 100%;
+}
+#noticias-destacadas {
+	width: 300vw;
+	overflow: auto;
+}
+#noticias-destacadas figure {
+	float: left;
+	width: 100vw;
+}
+#noticias-destacadas h2 {
+	background-color: #333;
+	color: #FFF;
+	font-size: 3.6rem;
+	font-weight: bold;
+	padding: 2rem;
+}
 
 
