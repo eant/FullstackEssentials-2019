@@ -10,17 +10,16 @@ document.querySelector(".header").appendChild(titulo);
 // creamos elemento select
 var select = document.createElement("select");
 
+select.className = "dropdown";
+
 // creamos options
-var option1 = document.createElement("option");
-var option2 = document.createElement("option");
+var nombres = ["Israel", "Gustavo", "Rodrigo", "Pablo"];
 
-option1.value = 1;
-option1.innerHTML = "uno";
-
-option2.value = 2;
-option2.innerHTML = "dos";
-
-select.appendChild(option1);
-select.appendChild(option2);
+for (let index = 0; index < nombres.length; index++) {
+  var option = document.createElement("option");
+  option.value = index;
+  option.innerHTML = nombres[index];
+  select.appendChild(option);
+}
 
 document.querySelector(".footer").appendChild(select);
