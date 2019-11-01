@@ -12,7 +12,7 @@ var select = document.createElement("select");
 
 select.className = "dropdown";
 
-// creamos options
+// creamos array con nombres
 var nombres = ["Israel", "Gustavo", "Rodrigo", "Pablo"];
 
 for (let index = 0; index < nombres.length; index++) {
