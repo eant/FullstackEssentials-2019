@@ -6,7 +6,7 @@ var miFuncion = function(elemento) {
 // Arrow Function (funcion tipo flecha)
 [("a", "b", "b")].map(el => console.log(el));
 
-// array de objetos noticias.
+// array de objetos noticias. (JSON)
 var noticias = [
   {
     titulo: "mi titulo",
@@ -46,6 +46,14 @@ function crearNoticia(noticia) {
   tpl.querySelector(".titulo").innerHTML = noticia.titulo;
   // inyectamos el descripcion en el html del elemento descripcion.
   tpl.querySelector(".descripcion").innerHTML = noticia.descripcion;
+
+  /**
+   * Para agregar la imagen, deberiamos agregar una url de una imagen
+   * en nuestro json de imagenes. (linea 10)
+   * Luego deberiamos asignar ese valor a propiedad `src`
+   * del elemento `img` de nuestro template.
+   *
+   */
 
   // Seleccionamos el elemento que contenga las noticias.
   var noticiasContenedor = document.querySelector(".noticias");
