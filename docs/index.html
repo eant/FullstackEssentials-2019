@@ -2,13 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
 		<title>DX - DeporteXtremo</title>
-		<link rel="stylesheet" href="css/reset.css">
+		<!-- <link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header>
 			<h1 id="logo">DeporteXtremo</h1>
+
+			<button id="hamburgesa">&#9776;</button>
+			
 			<nav id="menu">
 				<ul>
 					<li>
@@ -61,14 +66,14 @@
 				</figure>
 			</section>
 
-			<section id="ultimas-noticias">
+			<section id="ultimas-noticias" class="container-fluid">
 				<!-- INICIO NOTICIA #1 -->
-				<article class="noticia">
-					<div class="noticia-img">
+				<article class="row">
+					<div class="col-12 col-md-4">
 						<!-- ACA VA LA IMAGEN -->
 						<img src="img/sorteo-libertadores.jpg" alt="">
 					</div>
-					<div class="noticia-txt">
+					<div class="col-12 col-md-8">
 						<!-- ACA VAN LOS TEXTOS -->
 						<h3>La tecnología llega a la actual edición de la Libertadores</h3>
 						<p>por <a href="#">Joaquín Angeli</a></p>

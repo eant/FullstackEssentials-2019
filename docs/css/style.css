@@ -135,6 +135,38 @@ img {
 	/* FIN DE ANIMACION */
 }
 
+#hamburguesa {
+	display: none;
+}
+
+@media screen and (max-width: 480px) {
+	/* Inicio Mobile */
+	#menu {
+		display: none;
+	}
+	#logo {
+		font-size: 2rem;
+		padding-left: 7rem;
+	}
+	#hamburgesa {
+		display: block;
+		font-size: 2rem;
+		background-color: transparent;
+		border: none;
+		color: #D9D9D9;
+		float: right;
+	}
+	.noticia {
+		flex-direction: column;
+	}
+	.noticia-img, .noticia-txt {
+		width: 100%
+	}
+	/* Fin de Mobile */
+}
+@media screen and (min-width: 481px) and (max-width: 768px){
+	
+}
 
 
 
