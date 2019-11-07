@@ -9,6 +9,44 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+		<!-- BORRAR DESDE ACÁ SI SALE MAL -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <h1 class="navbar-brand m-0 p-2 d-flex align-items-center">
+    <img src="img/logo.png" class="d-inline-block align-middle w-25" alt="">
+  	<span class="h2 font-weight-bold my-0 mx-3">DeporteXtremo</span>
+  </h1>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Futbol <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">NBA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tenis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Formula 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Boxeo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">JJOO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Moto GP</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+		<!-- BORRAR HASTA ACÁ SI SALE MAL -->
 		<header>
 			<h1 id="logo">DeporteXtremo</h1>
 
@@ -75,6 +113,7 @@
 					</div>
 					<div class="col-12 col-md-8">
 						<!-- ACA VAN LOS TEXTOS -->
+						<div class="alert alert-danger" role="alert">ULTIMO MOMENTO: "Inventaron el VAR!!!"</div>
 						<h3>La tecnología llega a la actual edición de la Libertadores</h3>
 						<p>por <a href="#">Joaquín Angeli</a></p>
 						<p>La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.</p>
@@ -83,27 +122,27 @@
 				<!-- FIN DE NOTICIA #1 -->
 
 				<!-- INICIO NOTICIA #2 -->
-				<article class="noticia">
-					<div class="noticia-img">
+				<article class="row">
+					<div class="col-12 col-md-4">
 						<!-- ACA VA LA IMAGEN -->
 						<img src="img/sorteo-libertadores.jpg" alt="">
 					</div>
-					<div class="noticia-txt">
+					<div class="col-12 col-md-8">
 						<!-- ACA VAN LOS TEXTOS -->
 						<h3>La tecnología llega a la actual edición de la Libertadores</h3>
 						<p>por <a href="#">Joaquín Angeli</a></p>
 						<p>La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.</p>
 					</div>
 				</article>
-				<!-- FIN DE NOTICIA #2 -->
+				<!-- FIN DE NOTICIA #2-->
 
 				<!-- INICIO NOTICIA #3 -->
-				<article class="noticia">
-					<div class="noticia-img">
+				<article class="row">
+					<div class="col-12 col-md-4">
 						<!-- ACA VA LA IMAGEN -->
 						<img src="img/sorteo-libertadores.jpg" alt="">
 					</div>
-					<div class="noticia-txt">
+					<div class="col-12 col-md-8">
 						<!-- ACA VAN LOS TEXTOS -->
 						<h3>La tecnología llega a la actual edición de la Libertadores</h3>
 						<p>por <a href="#">Joaquín Angeli</a></p>
@@ -113,12 +152,12 @@
 				<!-- FIN DE NOTICIA #3 -->
 
 				<!-- INICIO NOTICIA #4 -->
-				<article class="noticia">
-					<div class="noticia-img">
+				<article class="row">
+					<div class="col-12 col-md-4">
 						<!-- ACA VA LA IMAGEN -->
 						<img src="img/sorteo-libertadores.jpg" alt="">
 					</div>
-					<div class="noticia-txt">
+					<div class="col-12 col-md-8">
 						<!-- ACA VAN LOS TEXTOS -->
 						<h3>La tecnología llega a la actual edición de la Libertadores</h3>
 						<p>por <a href="#">Joaquín Angeli</a></p>
@@ -126,8 +165,42 @@
 					</div>
 				</article>
 				<!-- FIN DE NOTICIA #4 -->
+				<!--
+				<div class="card mb-3" style="max-width: 540px;">
+					<div class="row no-gutters">
+						<div class="col-md-4">
+							<img src="https://lorempixel.com/960/640/animals" class="card-img img-fluid" alt="...">
+						</div>
+						<div class="col-md-8">
 
-			</section>
+							<div class="row">
+								<div class="col-md-6">
+
+									<div class="card-body">
+										<h5 class="card-title">Card title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+									</div>
+									
+								</div>
+
+								<div class="col-md-6">
+									
+									<div class="card-body">
+										<h5 class="card-title">Card title</h5>
+										<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+									</div>
+									
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+ 				-->
+				</section>
 
 			<section id="tabla-resultados">
 				
@@ -173,6 +246,9 @@
 		</footer>
 
 		<!-- AREA DE JAVASCRIPT -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

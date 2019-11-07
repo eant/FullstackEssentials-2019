@@ -2,7 +2,7 @@
 	font-size: 62.5%;
 }
 * {
-	outline: dotted 1px red;
+	_outline: dotted 1px red;
 }
 body {
 	font-family: "Helvetica", "Arial", "Open Sans", sans-serif;
@@ -36,14 +36,14 @@ header h1 {
 header a {
 	font-size: 1.6rem;
 }
-nav {
+#menu {
 	float: right;
 }
-nav li {
+#menu li {
 	display: inline-block;
 	margin: .5rem;
 }
-nav li a {
+#menu li a {
 	display: block;
 	padding: .5rem;
 }
@@ -119,6 +119,14 @@ img {
 #tabla-resultados td:nth-of-type(even) span {
 	color: darkgreen;
 	font-weight: bold;
+}
+
+#ultimas-noticias .row {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+#ultimas-noticias .col-md-4 {
+	background-color: darkviolet
 }
 
 
