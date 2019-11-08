@@ -39,5 +39,9 @@ form.addEventListener("submit", evt => {
     }
   }
 
-  console.log(data);
+  // guardo la data del form en localStorage.
+  localStorage["data"] = JSON.stringify(data);
+
+  // logueo el string objeto pasado.
+  console.log(JSON.parse(localStorage["data"]));
 });
