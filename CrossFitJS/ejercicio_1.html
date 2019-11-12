@@ -62,6 +62,26 @@
 			var precio = prompt("Ingrese precio:")
 			var disponible = confirm("Esta disponible para la venta?")
 
+			if( nombre == "" || nombre == null || nombre == undefined ){
+				//Hacer esto...
+				alert("¡ERROR! El nombre no puede quedar vacio ò_ó")
+			}
+
+			if( isNaN(stock) || stock < 0 ){
+				alert("¡ERROR! Ingrese un stock valido")
+			}
+
+			if( isNaN(precio) || precio <= 0 || precio > 1000 ){
+				alert("¡ERROR! Ingrese un precio entre $1 y $1000 (solo numeros)")
+			}
+
+			if( disponible == undefined ){
+				alert("¡ERROR! Indique si esta disponible")
+			}
+
+			//console.log("Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u")
+
+			document.querySelector("article").innerText = "Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u"
 		</script>
 	</body>
 </html>
