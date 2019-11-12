@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
   <body>
     <form id="MyForm" action="#">
       <label for="Nombre">Nombre</label>
-      <input id="Nombre" type="text" name="nombre" />
+      <input
+        id="Nombre"
+        type="text"
+        name="nombre"
+        required
+        pattern="nombre|apellido|opcionc"
+      />
+
+      <label for="Email">Email</label>
+      <input id="Email" type="email" name="email" required />
 
       <label for="Apellido">Apellido</label>
       <input id="Apellido" type="text" name="apellido" />
@@ -27,8 +37,7 @@
         <option value="3">frutilla</option>
       </select>
 
-      <input type="submit" />
-      <!-- <button type="submit"></button> -->
+      <button type="submit">Send</button>
     </form>
   </body>
   <script src="./index.js"></script>
