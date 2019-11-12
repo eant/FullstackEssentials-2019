@@ -8,15 +8,18 @@
     <title>Document</title>
   </head>
   <body>
-    <form id="MyForm" action="#">
-      <label for="Nombre">Nombre</label>
-      <input
-        id="Nombre"
-        type="text"
-        name="nombre"
-        required
-        pattern="nombre|apellido|opcionc"
-      />
+    <form id="MyForm" name="MyForm" action="#">
+      <div>
+        <label for="Nombre">Nombre</label>
+        <input
+          id="Nombre"
+          type="text"
+          name="nombre"
+          required
+          pattern="nombre|apellido|opcionc"
+        />
+        <small class="error"></small>
+      </div>
 
       <label for="Email">Email</label>
       <input id="Email" type="email" name="email" required />

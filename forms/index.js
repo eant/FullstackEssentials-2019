@@ -1,9 +1,9 @@
 let nombre = document.querySelector("#Nombre");
 
 // Escuchamos el evento keyup
-nombre.addEventListener("keyup", function(evt) {
-  console.log(evt.target.value);
-});
+// nombre.addEventListener("keyup", function(evt) {
+//   console.log(evt.target.value);
+// });
 
 // definimos handler para select y datepicker
 let handler = evt => console.log(evt.target.value);
@@ -45,3 +45,33 @@ form.addEventListener("submit", evt => {
   // logueo el string objeto pasado.
   console.log(JSON.parse(localStorage["data"]));
 });
+
+const renderError = (selector, text) => {
+  selector.parentNode.querySelector(".error").innerHTML = text;
+};
+
+const validators = {
+  ["text"]: evt => {
+    if (!["nombre", "apellido", "opcionc"].includes(evt.target.value)) {
+      renderError(evt.target, "el valor no es correcto");
+    } else {
+      renderError(evt.target, "");
+    }
+  }
+};
+
+const validator = evt => {
+  if (typeof validators[evt.target.type] !== "function") {
+    return false;
+  }
+
+  validators[evt.target.type](evt);
+
+  return;
+};
+
+let formElements = document.forms["MyForm"].elements;
+
+for (let index = 0; index < formElements.length; index++) {
+  formElements[index].addEventListener("blur", validator);
+}
