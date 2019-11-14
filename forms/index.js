@@ -50,16 +50,6 @@ const renderError = (selector, text) => {
   selector.parentNode.querySelector(".error").innerHTML = text;
 };
 
-const validators = {
-  ["text"]: evt => {
-    if (!["nombre", "apellido", "opcionc"].includes(evt.target.value)) {
-      renderError(evt.target, "el valor no es correcto");
-    } else {
-      renderError(evt.target, "");
-    }
-  }
-};
-
 const validateText = evt => {
   if (evt.target.value === "" || evt.target.value.length < 15) {
     renderError(evt.target, "el valor no es correcto");
@@ -86,24 +76,18 @@ const validateEmail = evt => {
   }
 };
 
+const validators = {
+  text: validateText,
+  number: validateNumber,
+  email: validateEmail
+};
+
 const validator = evt => {
-  // if (typeof validators[evt.target.type] !== "function") {
-  //   return false;
-  // }
-
-  // validators[evt.target.type](evt);
-
-  if (evt.target.type === "text") {
-    validateText(evt);
+  if (typeof validators[evt.target.type] !== "function") {
+    return false;
   }
 
-  if (evt.target.type === "number") {
-    validateNumber(evt);
-  }
-
-  if (evt.target.type === "email") {
-    validateEmail(evt);
-  }
+  validators[evt.target.type](evt);
 
   return;
 };
