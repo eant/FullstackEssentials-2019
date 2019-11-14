@@ -31,16 +31,26 @@
 
 		<script>
 			/* 1) Seleccionar el h1 y guardarlo en una variable */
+			var titulo = document.querySelector("h1")
 
 			/* 2) Modificar el texto interno de esta variable */
+			//titulo.innerText = `Hola desde el bloque "script" del documento`
 
 			/* 3) Una vez que funcione, probar poniendo el <script> en el <head> para corroborar que JavaScript se ejecuta secuencialmente! */
 
 			// EXTRA: Explicacion de Manipulaciones
 
 			/* 1) Manipulacion de Contenido */
+			titulo.innerHTML = "Estoy <em>manipulando</em> el contenido del h1"
 
 			/* 2) Manipulacion de Estructura */
+			//titulo.style.color = "red"
+			//titulo.style.backgroundColor = "pink"
+
+			titulo.classList.add("alerta")
+			//titulo.classList.remove("alerta")
+
+			titulo.title = "Que copado esto ¿no?"
 
 			/* 3) Manipulacion de Comportamiento */
 		</script>

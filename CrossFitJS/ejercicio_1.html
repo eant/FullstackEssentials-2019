@@ -56,12 +56,13 @@
 			//... determinable luego de una operación del usuario
 			var usuario = prompt("Quien es usted?")
 			*/
-
+			//1) Introduccion
 			var nombre = prompt("Ingrese nombre:")
 			var stock = prompt("Ingrese stock:")
 			var precio = prompt("Ingrese precio:")
 			var disponible = confirm("Esta disponible para la venta?")
 
+			//2) Nudo
 			if( nombre == "" || nombre == null || nombre == undefined ){
 				//Hacer esto...
 				alert("¡ERROR! El nombre no puede quedar vacio ò_ó")
@@ -81,6 +82,7 @@
 
 			//console.log("Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u")
 
+			//3) Desenlace
 			document.querySelector("article").innerText = "Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u"
 		</script>
 	</body>
