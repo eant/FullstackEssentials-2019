@@ -60,12 +60,50 @@ const validators = {
   }
 };
 
+const validateText = evt => {
+  if (evt.target.value === "" || evt.target.value.length < 15) {
+    renderError(evt.target, "el valor no es correcto");
+  } else {
+    renderError(evt.target, "");
+  }
+};
+
+const validateNumber = evt => {
+  if (isNaN(evt.target.value)) {
+    renderError(evt.target, "el numero no es correcto");
+  } else {
+    renderError(evt.target, "");
+  }
+};
+
+const validateEmail = evt => {
+  const reEmail = /\S+@\S+\.\S+/;
+
+  if (!reEmail.test(evt.target.value)) {
+    renderError(evt.target, "el email no es correcto");
+  } else {
+    renderError(evt.target, "");
+  }
+};
+
 const validator = evt => {
-  if (typeof validators[evt.target.type] !== "function") {
-    return false;
+  // if (typeof validators[evt.target.type] !== "function") {
+  //   return false;
+  // }
+
+  // validators[evt.target.type](evt);
+
+  if (evt.target.type === "text") {
+    validateText(evt);
   }
 
-  validators[evt.target.type](evt);
+  if (evt.target.type === "number") {
+    validateNumber(evt);
+  }
+
+  if (evt.target.type === "email") {
+    validateEmail(evt);
+  }
 
   return;
 };
