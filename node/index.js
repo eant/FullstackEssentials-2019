@@ -9,6 +9,8 @@ const noticias = [
   }
 ];
 
+app.use("/", express.static("./public"));
+
 app.get("/api/v1/noticias", function(req, res) {
   res.status(200).send({
     success: true,
