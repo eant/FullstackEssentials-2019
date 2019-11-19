@@ -1,9 +1,13 @@
 const express = require("express");
 const noticias = require("./noticias.json");
 
-const app = express();
+var cors = require("cors");
 
-app.get("/", (req, res) => {
+var app = express();
+
+app.use(cors());
+
+app.get("/api/v1/noticias", (req, res) => {
   console.log(req.query);
   res.status(200).send({
     success: true,
