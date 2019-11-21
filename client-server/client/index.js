@@ -1,4 +1,10 @@
-const url = "http://localhost:3000/api/v1/noticias";
+let url = "http://localhost:3000/api/v1/noticias";
+
+if (window.location.pathname) {
+  url += window.location.pathname;
+
+  console.log(url);
+}
 
 fetch(url)
   .then(response => response.json())
@@ -25,6 +31,8 @@ function crearNoticia(noticia) {
   var tpl = document.createElement("div");
   // inyectamos el html de nuestro template.
   tpl.innerHTML = document.querySelector("#noticiaTpl").innerHTML;
+
+  tpl.querySelector(".link").href = "/" + noticia.id;
 
   // inyectamos el titulo en el html del elemento titulo.
   tpl.querySelector(".titulo").innerHTML = noticia.title;
