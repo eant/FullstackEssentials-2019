@@ -5,12 +5,12 @@ const form = document.forms["notiForm"];
 form.addEventListener("submit", evt => {
   evt.preventDefault();
   const elements = evt.target.elements;
-  const data = [];
+  const data = {};
 
   for (let index = 0; index < elements.length; index++) {
     const element = elements[index];
     if (element.type !== "submit") {
-      data.push({ [element.name]: element.value });
+      data[element.name] = element.value;
     }
   }
 

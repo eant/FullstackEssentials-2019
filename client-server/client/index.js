@@ -2,8 +2,6 @@ let url = "http://localhost:3000/api/v1/noticias";
 
 if (window.location.pathname) {
   url += window.location.pathname;
-
-  console.log(url);
 }
 
 fetch(url)
