@@ -17,16 +17,22 @@ app.use(cors());
 app.use(bodyParser());
 
 app.get("/api/v1/noticias/:id?", (req, res) => {
-  let response = noticias.data;
+  let status = 200;
 
-  if (req.params.id) {
-    response = noticias
-      .chain()
-      .find({ $loki: Number(req.params.id) })
-      .data();
+  let response;
+  try {
+    response = noticias.data;
+    if (req.params.id) {
+      response = noticias
+        .chain()
+        .find({ $loki: Number(req.params.id) })
+        .data();
+    }
+  } catch (e) {
+    status = 500;
   }
 
-  res.status(200).send({
+  res.status(status).send({
     success: true,
     message: "esta todo bien",
     noticias: response
