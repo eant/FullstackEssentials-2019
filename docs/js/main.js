@@ -23,9 +23,9 @@ let noticia4 = {
 	imagen : "buenos-aires.jpg"
 }
 
-crearNoticia(titulo, autor, detalle, imagen)
-crearNoticia(noticia3[0], noticia3[1], noticia3[2], noticia3[3])
-crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
+//crearNoticia(titulo, autor, detalle, imagen)
+//crearNoticia(noticia3[0], noticia3[1], noticia3[2], noticia3[3])
+//crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
 
 
 //Ambito: linea de ejecucion funcional
