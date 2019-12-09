@@ -1,0 +1,25 @@
+{
+  "name": "dx-deportextremo",
+  "version": "0.0.2",
+  "description": "Proyecto DeporteXtremo con Node.js",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eant/PWFE-M1-14.git"
+  },
+  "author": "smessina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eant/PWFE-M1-14/issues"
+  },
+  "homepage": "https://github.com/eant/PWFE-M1-14#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
