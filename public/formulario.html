@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,900">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+    <title>DX - DeporteXtremo</title>
+
+    <style>
+      body {
+        font-family: 'Raleway', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+      <!-- Inicio Menu -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">DeporteXtremo</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="far fa-futbol"></i> Fútbol</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-basketball-ball"></i> NBA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-baseball-ball"></i> Tenis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-flag-checkered"></i> Fórmula 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-hand-rock"></i> Boxéo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-medal"></i> JJOO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-motorcycle"></i> Moto GP</a>
+            </li>
+           
+          </ul> 
+        </div>
+      </nav>
+      <!-- Fin Menu -->
+
+      <main class="container-fluid">
+
+        <!-- INICIO FORMULARIO -->
+        <form action="./enviar" method="post">
+          <div class="form-group">
+            <label for="titulo">Titulo:</label>
+            <input type="text" name="titulo" class="form-control" placeholder="Ej: Murio Kennedy">
+          </div>
+
+          <div class="form-group">
+            <label for="autor">Autor:</label>
+            <input type="text" name="autor" class="form-control" placeholder="Ej: Julio Sanchéz">
+          </div>
+
+          <div class="form-group">
+            <label for="detalle">Detalle:</label>
+            <textarea name="detalle" class="form-control" rows="5" placeholder="Ej: Una bala le saco las ideas de encima..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="imagen">Imagen:</label>
+            <input type="text" name="imagen" class="form-control" placeholder="Ej: https://ibb.co/b27g2u/noticia.jpg">
+          </div>
+
+          <div class="form-group">
+            <!--
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            -->
+            <input type="submit" value="Enviar" class="btn btn-dark">
+          </div>
+        </form>
+        <!-- FIN DEL FORMULARIO-->
+
+      </main>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="js/main.js"></script>
+      <script>
+
+      </script>
+  </body>
+</html>

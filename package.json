@@ -1,0 +1,27 @@
+{
+  "name": "deportextremo",
+  "version": "3.0.0",
+  "description": "Web de Noticias y Resultados Deportivos",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eant/PWFE-M1-05.git"
+  },
+  "author": "Silvio Messina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eant/PWFE-M1-05/issues"
+  },
+  "homepage": "https://github.com/eant/PWFE-M1-05#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "lokijs": "^1.5.6",
+    "nodemon": "^1.19.1",
+    "querystring": "^0.2.0"
+  }
+}

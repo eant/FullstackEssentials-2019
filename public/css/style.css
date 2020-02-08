@@ -1,0 +1,182 @@
+/* Comentario: Anatomia de una Regla CSS; */
+/*
+selector {
+	propiedad : valor;
+	propiedad : valor;
+	propiedad : valor;
+}
+*/
+* {
+	outline: dotted 1px red;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	margin: 0;
+}
+img {
+	display: block;
+	width: 100%;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+header {
+	background-color: #333;
+	color: #FFF;
+	padding: 15px;
+	overflow: hidden;
+}
+header a {
+	color: #FFF;
+	display: block;
+	padding: 5px;
+	text-align: center;
+}
+header a:hover {
+	color: #AAA
+}
+header h1 {
+	float: left;
+	font-size: 28px;
+	font-weight: 700;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+	padding-left: 70px;
+}
+header nav {
+	float: right;
+}
+header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+header ul li {
+	display: inline-block;
+}
+#noticias-destacadas img { /* <-- refiere a un elemento con id="noticias-destacadas" */
+	width: 100%;
+	display: block;
+}
+#noticias-destacadas figure {
+	margin: 0;
+}
+#noticias-destacadas h2 {
+	background-color: #333;
+	color: #FFF;
+	font-size: 32px;
+	font-weight: 700;
+	padding: 20px;
+}
+.noticia {
+	display: flex;
+	flex-direction: row;
+	align-items: center; /* flex-start | center | flex-end */
+	justify-content: space-around; /* flex-start | center | flex-end | space-around | space-between */
+	
+	border-bottom: solid 1px #CCC;
+	padding: 20px 0;
+	margin: 0 20px;
+}
+.noticia:last-child {
+	border: none;
+}
+.noticia-img {
+	width: 30%;
+}
+.noticia-txt {
+	width: 60%;
+}
+.noticia-txt h3,
+.noticia-txt p,
+.noticia-txt blockquote {
+	margin: 20px 0;
+	line-height: 1.5;
+}
+.noticia-txt h3 {
+	font-weight: 700;
+	font-size: 28px;
+}
+.noticia-txt p a {
+	color: #000;
+	font-weight: 700;
+}
+#tabla-posiciones table {
+	margin: auto;
+	border-collapse: collapse;
+	border: none;
+	width: 80%;
+}
+#tabla-posiciones table th {
+	background-color: red;
+	color: #FFF;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 20px;
+}
+#tabla-posiciones table td {
+	background-color: #D9D9D9;
+	padding: 10px;
+}
+#tabla-posiciones table td:nth-of-type(odd){
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+#tabla-posiciones table td:nth-of-type(even) span {
+	color: #009688;
+	font-weight: bold;
+}
+#tabla-posiciones table tr {
+	border-bottom: solid 1px #CCC
+}
+#tabla-posiciones table tr:first-child,
+#tabla-posiciones table tr:last-child {
+	border: none;
+}
+footer {
+	background-color: #333;
+	color: #FFF;
+	text-align: center;
+	font-size: 10px;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+/* ************************* */
+	header h1 {
+		font-size: 24px;
+		padding-left: 55px;
+	}
+	header nav {
+		display: none;
+		float: none;
+		clear: both;
+	}
+	header nav li {
+		display: block;
+	}
+	header button {
+		margin: 0;
+		padding: 5px;
+		color: #FFF;
+		border: none;
+		float: right;
+		background-color: transparent;
+		font-size: 20px;
+		line-height: 1;
+		font-weight: 700;
+	}
+	header button:focus + nav {
+		display: block;
+	}
+/* ************************* */
+}
