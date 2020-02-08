@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="MyForm" name="MyForm" action="#">
+      <div>
+        <label for="Nombre">Nombre</label>
+        <input
+          id="Nombre"
+          type="text"
+          name="nombre"
+          required
+          pattern="nombre|apellido|opcionc"
+        />
+        <small class="error"></small>
+      </div>
+
+      <div>
+        <label for="Email">Email</label>
+        <input id="Email" type="email" name="email" required />
+        <small class="error"></small>
+      </div>
+
+      <div>
+        <label for="Apellido">Apellido</label>
+        <input id="Apellido" type="text" name="apellido" />
+        <small class="error"></small>
+      </div>
+
+      <div>
+        <label for="Edad">Edad</label>
+        <input id="Edad" type="number" name="edad" />
+        <small class="error"></small>
+      </div>
+
+      <div>
+        <label for="Date">Date</label>
+        <input id="Date" type="date" name="date" />
+        <small class="error"></small>
+      </div>
+
+      <select name="fruta" id="Fruta">
+        <option value="-1">ingrese una fruta</option>
+        <option value="1">manzana</option>
+        <option value="2">pera</option>
+        <option value="3">frutilla</option>
+      </select>
+
+      <button type="submit">Send</button>
+    </form>
+  </body>
+  <script src="./index.js"></script>
+</html>

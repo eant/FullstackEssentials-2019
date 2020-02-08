@@ -1,0 +1,25 @@
+.header,
+.footer {
+  height: 20vh;
+}
+
+.header {
+  background-color: yellow;
+}
+
+.footer {
+  background-color: gray;
+}
+
+.blue,
+.red {
+  height: 80vh;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
