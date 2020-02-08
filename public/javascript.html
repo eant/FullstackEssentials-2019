@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Kiosko "El JeviScript"</title>
+		<link rel="stylesheet" href="https://docs.google.com/uc?id=17C6A6tYbFc9esDbgo0Q-HjN2rNjvXbyc">
+	</head>
+	<body>
+		<h1>Kiosko <strong>El JeviScript</strong></h1>
+
+		<button>Nuevo Producto +</button>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Stock</th>
+					<th>Precio</th>
+					<th>Disponible</th>
+				</tr>
+			</thead>
+			<tbody id="productos">
+				<!-- ACÁ TIENEN QUE APARECER LOS PRODUCTOS -->
+			</tbody>
+		</table>
+
+		<script>
+			document.querySelector("button").onclick = cargarProducto
+
+			function cargarProducto(){
+				/**** Inicio cargarProducto() ****/
+
+				/* Introduccion */
+				let nombre = prompt("Ingrese nombre:")       //<-- String: Valores Alfanuméricos
+				let stock = prompt("Ingrese stock:")         //<-- Int: Números Enteros
+				let precio = prompt("Ingrese precio:")       //<-- Float: Números con Decimales
+				let disponible = confirm("Esta disponible?") //<-- Bool: Valores true/false
+
+				/* Nudo */
+				while( nombre == "" || nombre == null || nombre == undefined ){
+
+					alert("ERROR: El nombre no puede quedar vacio...")
+					nombre = prompt("Ingrese nombre:")
+
+				}
+
+				if( stock == "" || stock < 0 ){
+
+					alert("ERROR: El stock debe ser un numero positivo")
+
+					return
+				}
+
+				if( precio == "" || precio < 0 || parseFloat(precio) == NaN ){
+
+					alert("ERROR: El stock debe ser un numero positivo con decimales")
+
+					return
+
+				}
+
+				if( disponible == undefined ){
+
+					alert("Error: Debe especificar la disponibilidad")
+
+					return
+
+				}
+
+				let precioFinal = precio * 1.21
+
+				/* Desenlace */
+				//let msg = `<p>El producto <strong>${nombre}</strong> vale ARS ${precioFinal} la unidad</p>` //<-- Template String
+
+				//document.querySelector("#productos").insertAdjacentHTML("beforeend", msg)
+
+				let fila = document.createElement("tr")
+
+				let celda1 = document.createElement("td")
+				let celda2 = document.createElement("td")
+				let celda3 = document.createElement("td")
+				let celda4 = document.createElement("td")
+
+				celda1.innerText = nombre
+				celda2.innerText = stock + " unid."
+				celda3.innerText = `$${precioFinal.toFixed(2)}`
+				/*
+				if( disponible == true ){
+					celda4.innerText = "Siii!"
+				} else {
+					celda4.innerText = "Nooo!"
+				}
+				*/
+				/* Operador ternario */
+				//VARIABLE = (CONDICION) ? VALOR VERDADERO : VALOR FALSO
+				celda4.innerText = disponible ? "SI" : "NO"
+
+				fila.appendChild( celda1 )
+				fila.appendChild( celda2 )
+				fila.appendChild( celda3 )
+				fila.appendChild( celda4 )
+
+				document.querySelector("#productos").appendChild(fila)
+
+				/**** Fin cargarProducto() ****/
+			}
+		</script>
+	</body>
+</html>

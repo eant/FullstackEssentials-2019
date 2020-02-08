@@ -1,0 +1,65 @@
+[
+  {
+	"fecha": "10/02/2019",
+	"titulo": "El auto volador que podrá elevarse a 3.500 metros",
+	"autor": "Alex Delgado",
+	"detalle": "Lugar predilecto de exhibición de las marcas de lujo, el salón del automóvil de Ginebra, que abrió sus puertas al público este jueves, rebosa de propuestas que van desde adaptaciones de los vehículos más ostentosos a los \"supercoches\", pasando por autos voladores.",
+	"imagen": "https://www.infotaller.tv/2018/09/04/concesionarios/primeras-unidades-fabricadas-entregaran_1252084786_348967_660x372.jpg"
+  },
+  {
+	"fecha": "20/02/2019",
+	"titulo": "Le Bron James superó a Michael Jordan",
+	"autor": "Nadia Muñoz",
+	"detalle": "LeBron James se convirtió en el cuarto máximo anotador de la historia de la NBA al superar a Michael Jordan con 32.292 puntos, pero Los Angeles Lakers volvió caer, ahora ante Denver Nuggets por 115-99, en una nueva jornada de la NBA.",
+	"imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/03/07080503/LeBron-James-vs-Denver-Nuggets-1920-2.jpg"
+  },
+  {
+	"fecha": "26/02/2019",
+	"titulo": "Cooperación Sur-Sur: cómo será la nueva cumbre internacional que llega a Buenos Aires",
+	"autor": "Rafael Aguilar",
+	"detalle": "Tras el éxito del G20, la Argentina volverá a ser sede de una nueva cumbre internacional. Recibirá entre el 20 y el 22 de marzo a jefes de Estado, cancilleres y representantes de países de todo el mundo, que se congregarán en la ciudad de Buenos Aires para participar de la Segunda Conferencia de Alto Nivel de Naciones Unidas sobre la Cooperación Sur-Sur, un encuentro entre países emergentes.",
+	"imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/12/01152919/conferencia-dujovne-faurie-G20-1920-4.jpg"
+  },
+  {
+	"fecha": "28/02/2019",
+	"titulo": "Metodologías ágiles, la nueva forma de trabajar en equipo",
+	"autor": "Manuela Iglesias",
+	"detalle": "Con el objetivo de que sus equipos alcancen todo su potencial, los líderes empiezan a adentrarse en el mundo de las metodologías ágiles",
+	"imagen": "https://assets.iprofesional.com/assets/jpg/2019/03/474110_landscape.jpg"
+  },
+  {
+	"fecha": "02/03/2019",
+	"titulo": "Jeff Bezos, CEO de Amazon, y una startup traen al país alimentos clonados con inteligencia artificial",
+	"autor": "Gabriela Navarro",
+	"detalle": "NotCo, que recibió u$s30 M de Amazon, tiene todo listo para llegar a Argentina. Su fundador asegura que es un gran momento para las startups de la región",
+	"imagen": "https://assets.iproup.com/assets/jpg/2019/03/2781_landscape.jpg"
+  },
+  {
+	"fecha": "04/03/2019",
+	"titulo": "La tecnología llega a la actual edición de la Libertadores",
+	"autor": "Joaquín Angeli",
+	"detalle": "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.",
+	"imagen": "https://i.ibb.co/qxTwsnM/sorteo-libertadores.jpg"
+  },
+  {
+	"fecha": "05/03/2019",
+	"titulo": "Comenzó la venta de entradas para el Mundial de Rusia 2018",
+	"autor": "Laura Smasnatta",
+	"detalle": "Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'",
+	"imagen": "https://i.ibb.co/7b48DYg/tickets-rusia-mundial.jpg"
+  },
+  {
+	"fecha": "06/03/2019",
+	"titulo": "A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo",
+	"autor": "Diego Di Marco",
+	"detalle": "El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia.",
+	"imagen": "https://i.ibb.co/p2JFRTr/firpo.jpg"
+  },
+  {
+	"fecha": "07/03/2019",
+	"titulo": "Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI",
+	"autor": "Melina Morales",
+	"detalle": "El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre.",
+	"imagen": "https://i.ibb.co/BjNSKV0/buenos-aires.jpg"
+  }
+]
