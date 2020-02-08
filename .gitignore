@@ -1,0 +1,4 @@
+_BASE_/
+*.db
+.DS_STORE
+node_modules/

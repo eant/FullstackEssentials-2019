@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/normalize.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/extra.css">
+		<title>Aprender a programar con JavaScript</title>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="ejercicio_1.html">Ejercicio 1</a>
+				<a href="ejercicio_2.html" class="active">Ejercicio 2</a>
+				<a href="ejercicio_3.html">Ejercicio 3</a>
+				<a href="ejercicio_4.html">Ejercicio 4</a>
+				<a href="ejercicio_5.html">Ejercicio 5</a>
+				<a href="ejercicio_6.html">Ejercicio 6</a>
+				<a href="ejercicio_7.html">Ejercicio 7</a>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Manipulación del DOM</h1>
+		</section>
+
+		<aside>
+			<p>Modificar el texto del titular utilizando javascript</p>
+		</aside>
+		
+		<script src="validar-link.js"></script>
+		<script>
+			/* 1) Seleccionar el h1 y guardarlo en una variable */
+			var titulo = document.querySelector("h1")
+
+			/* 2) Modificar el texto interno de esta variable */
+			titulo.innerText = "Hola desde un script JS"
+
+			/* 3) Una vez que funcione, probar poniendo el <script> en el <head> para corroborar que JavaScript se ejecuta secuencialmente! */
+
+			// EXTRA: Ejemplos de Manipulaciones
+
+			
+			
+			//3) Manipulacion de Comportamiento
+			titulo.onclick = cambiarTitulo
+
+			function cambiarTitulo(){
+				//1) Manipulacion de Contenido
+				titulo.innerHTML = "<del>Soy un texto manipulado</del>"
+
+				//2) Manipulacion de Estructura
+				titulo.style.color = "#848523"
+				titulo.style.backgroundColor = "#128459"
+
+				titulo.title = "Esto que lees lo puso JS"
+			}
+		</script>
+	</body>
+</html>
