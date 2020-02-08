@@ -1,0 +1,24 @@
+{
+  "name": "pwfe-m1-09",
+  "version": "0.0.1",
+  "description": "Web Server basico para AJAX y otros en Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eant/PWFE-M1-09.git"
+  },
+  "author": "TheSilvio @smessina_",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eant/PWFE-M1-09/issues"
+  },
+  "homepage": "https://github.com/eant/PWFE-M1-09#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
+}
