@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>DX - DeporteXtremo</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- HEADER-MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" width="45" class="d-inline-block align-center" alt="">
+            <span class="font-weight-bold">DeporteXtremo</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menu">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Fútbol <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">NBA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tenis</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fórmula 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Boxéo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">JJOO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Moto GP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HEADER-MENU -->
+    <!-- SLIDER -->
+    <div id="noticiasDestacadas" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <figure class="carousel-item active">
+                <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
+                <figcaption class="carousel-caption bg-dark w-100 position-static text-left p-3">
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-item">
+                <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
+                <figcaption class="carousel-caption bg-dark w-100 position-static text-left p-3">
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-item">
+                <img src="img/juegos-olimpicos.jpg" class="d-block w-100" alt="...">
+                <figcaption class="carousel-caption bg-dark w-100 position-static text-left p-3">
+                    <h5>First slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </figcaption>
+            </figure>
+        </div>
+        <!-- CONTROLS -->
+        <a class="carousel-control-prev" href="#noticiasDestacadas" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#noticiasDestacadas" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- SLIDER -->
+
+    <main class="container-fluid">
+    	<section id="ultimas-noticias">
+
+    		<article class="row noticia d-none">
+    			<div class="noticia-img col-12 col-sm-5 col-lg-4">
+    				<img src="https://via.placeholder.com/1000x600/" class="img-fluid">
+    			</div>
+
+    			<div class="noticia-txt col-12 col-sm-7 col-lg-8">
+					<h3 class="h5 font-weight-bold">{{TITULO}}</h3>
+					<p class="small">por <a href="#">{{AUTOR}}</a></p>
+					<p>{{DETALLE}}</p>
+    			</div>
+    		</article>
+    		
+    	</section>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+		///// AJAX /////
+		var ajax = new XMLHttpRequest();
+		ajax.open("GET", "https://api.sheety.co/0a889584-59ee-43e2-a609-3335d68ac8b8");
+		ajax.onload = function(){
+			if( ajax.status == 200 ){
+                //console.log("Antes de parsear:")
+				//console.log( ajax.response )
+
+                let noticias = JSON.parse( ajax.response )
+
+                //console.log("Despues de parsear:")
+                //console.log( noticias )
+
+                noticias.forEach(function(noticia){
+
+                    let ficha = document.querySelector(".noticia").cloneNode(true);
+
+                    ficha.querySelector("h3").innerText = noticia.titulo;
+                    ficha.querySelector(".small a").innerText = noticia.autor;
+                    ficha.querySelector("p:last-child").innerText = noticia.detalle;
+                    ficha.querySelector("img").src = noticia.imagen;
+
+                    ficha.classList.remove("d-none");
+
+                    document.querySelector("#ultimas-noticias").appendChild(ficha);
+
+                })
+			}
+		};
+		ajax.send();
+
+    	/*
+        for(var i = 0; i < noticias.length; i++){
+            var noticia = document.querySelector(".noticia").cloneNode(true);
+
+            noticia.querySelector("h3").innerText = noticias[i][0];
+            noticia.querySelector(".small a").innerText = noticias[i][1];
+            noticia.querySelector("p:last-child").innerText = noticias[i][2];
+            noticia.querySelector("img").src = "img/" + noticias[i][3];
+
+            noticia.classList.remove("d-none");
+
+            document.querySelector("#ultimas-noticias").appendChild(noticia);
+        }
+        
+        var plantilla = document.querySelector(".noticia").cloneNode(true);
+  		
+  		plantilla.querySelector("h3").innerText = noticia.titulo;
+  		plantilla.querySelector(".small a").innerText = noticia.autor;
+  		plantilla.querySelector("p:last-child").innerText = noticia.detalle;
+  		plantilla.querySelector("img").src = "img/" + noticia.imagen;
+
+		plantilla.classList.remove("d-none");
+
+        document.querySelector("#ultimas-noticias").appendChild(plantilla);
+        */
+    </script>
+</body>
+
+</html>
