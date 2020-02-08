@@ -1,0 +1,59 @@
+/*
+	Anatomía de las reglas CSS:
+
+	selector {
+		propiedad: valor;
+		propiedad: valor;
+		propiedad: valor;
+	}
+*/
+body {
+	font-family: Verdana, sans-serif;
+	color: rgb(66, 67, 69);
+	background-color: #D9D9D9;
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 22px;
+	line-height: 1.5;
+	text-align: justify;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+img {
+	width: 320px;
+	margin: auto;
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	background-color: #FFF;
+	color: rgb(66, 67, 69);
+}
+.personaje {
+	color: #FFFFFF !important;
+	background-color: rgb(66, 67, 69);
+	padding: 0 5px;
+}
+#iron-man {
+	color: gold;
+	background-color: darkred;
+}
+
+.marvel .personaje {
+	font-family: "Palatino Linotype";
+}
+
+.dc .personaje {
+	font-family: "Helvetica";
+}

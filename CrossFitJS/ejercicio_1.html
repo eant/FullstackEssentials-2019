@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/normalize.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/extra.css">
+		<title>Aprender a programar con JavaScript</title>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="ejercicio_1.html" class="active">Ejercicio 1</a>
+				<a href="ejercicio_2.html">Ejercicio 2</a>
+				<a href="ejercicio_3.html">Ejercicio 3</a>
+				<a href="ejercicio_4.html">Ejercicio 4</a>
+				<a href="ejercicio_5.html">Ejercicio 5</a>
+				<a href="ejercicio_6.html">Ejercicio 6</a>
+				<a href="ejercicio_7.html">Ejercicio 7</a>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Aprender a programar con JavaScript</h1>
+		</section>
+
+		<aside>
+			<p>Crear un "asistente" que pida los siguientes datos de un producto:</p>
+			<ul>
+				<li>Nombre</li>
+				<li>Stock</li>
+				<li>Precio</li>
+				<li>Disponibilidad</li>
+			</ul>
+			<p>Validar que cada dato ingresado resulte "correcto" según su naturaleza.</p>
+			<p>Mostrar un mensaje en el <code>&lt;article&gt;</code> que indique el cuanto valen y cuantas unidades hay de ese producto.</p>
+			<article>
+
+			</article>
+		</aside>
+
+		<script>
+			// Tipos de datos "primitivos"
+			// Datos de origen "determinado" (Hardcodeado)
+			/*
+			var nombre = "Computadora Bangho" //<-- string
+			var stock = 100 //<-- int
+			var precio = 39999.99 //<-- float
+			var disponible = false //<-- bool
+ 
+			//Datos de origen "indeterminado"...
+			//... determinable luego de una operación logico-matematica
+			var precioFinal = precio * 1.21
+
+			//... determinable luego de una operación del usuario
+			var usuario = prompt("Quien es usted?")
+			*/
+			//1) Introduccion
+			var nombre = prompt("Ingrese nombre:")
+			var stock = prompt("Ingrese stock:")
+			var precio = prompt("Ingrese precio:")
+			var disponible = confirm("Esta disponible para la venta?")
+
+			//2) Nudo
+			if( nombre == "" || nombre == null || nombre == undefined ){
+				//Hacer esto...
+				alert("¡ERROR! El nombre no puede quedar vacio ò_ó")
+			}
+
+			if( isNaN(stock) || stock < 0 ){
+				alert("¡ERROR! Ingrese un stock valido")
+			}
+
+			if( isNaN(precio) || precio <= 0 || precio > 1000 ){
+				alert("¡ERROR! Ingrese un precio entre $1 y $1000 (solo numeros)")
+			}
+
+			if( disponible == undefined ){
+				alert("¡ERROR! Indique si esta disponible")
+			}
+
+			//console.log("Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u")
+
+			//3) Desenlace
+			document.querySelector("article").innerText = "Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u"
+		</script>
+	</body>
+</html>
