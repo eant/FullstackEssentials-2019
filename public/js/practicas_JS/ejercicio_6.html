@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/normalize.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/extra.css">
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="ejercicio_1.html">Ejercicio 1</a>
+				<a href="ejercicio_2.html">Ejercicio 2</a>
+				<a href="ejercicio_3.html">Ejercicio 3</a>
+				<a href="ejercicio_4.html">Ejercicio 4</a>
+				<a href="ejercicio_5.html">Ejercicio 5</a>
+				<a href="ejercicio_6.html" class="active">Ejercicio 6</a>
+			</nav>
+		</header>
+
+		<section>
+
+		<select name="habitacion">
+			<option value="0">Seleccione habitación</option>
+			<option value="modesta">Modesta</option>
+			<option value="elegante">Elegante</option>
+			<option value="lujosa">Lujosa</option>
+		</select>
+
+		<article class="habitacion habitacion-modesta">
+			<h1>Modesta</h1>
+			<p>Una de las mejores opciones dentro del bajo costo</p>
+			<p>A solo <strong>ar$80.-</strong> la noche</p>
+		</article>
+
+		<article class="habitacion habitacion-elegante">
+			<h1>Elegante</h1>
+			<p>Balcón interior, baño privado</p>
+			<p>A solo <strong>ar$150.-</strong> la noche</p>
+		</article>
+
+		<article class="habitacion habitacion-lujosa">
+			<h1>Lujosa</h1>
+			<p>Para los más exigentes</p>
+			<p>A solo <strong>ar$350.-</strong> la noche</p>
+		</article>
+
+		</section>
+
+		<aside>
+			<p>Esconder los 3 detalles asignando a cada habitación la clase "esconder" definida en extra.css</p>
+			<p>Cuando el usuario selecciona una de las opciones, mostrar la que corresponda (removiendo la clase)</p>
+			<p>Si el usuario vuelve a "seleccionar habitación" quedan todas escondidas</p>
+		</aside>
+
+		<script>
+		/* 1) Seleccionar todas las habitaciones */
+		const habitaciones = document.querySelectorAll(".habitacion");
+
+		/* 2) Seleccionar el select */
+		const menu = document.querySelector("select[name=habitacion]");
+
+		/* 3) Asignar la funcion mostrarOpcion al evento correspondiente */
+		menu.onchange = mostrarOpcion;
+
+		/* 4) Pensar una solucion logica para esconder todas las habitaciones cada vez que sea necesario */
+		esconderTodas()
+
+		function esconderTodas(){
+			/////////////////////
+			for(let i = 0; i < habitaciones.length; i++){
+				console.log("Se escondio la habitacion: " + i)
+				habitaciones[i].classList.add("esconder")
+			}
+			////////////////////
+		}
+
+		function mostrarOpcion(){
+
+			esconderTodas();
+
+			/* 5) Obtener la opción seleccionada */
+			const elegida = menu.value; //<-- "modesta" | "elegante" | "lujosa" | "0"
+			
+			if( elegida == "0" ) return
+
+			/* 6) Seleccionar la habitación correspondiente usando un selector dinámico */
+			const habitacion = document.querySelector(".habitacion-" + elegida);
+
+			console.log("La elegida es: ")
+			console.log( habitacion )
+
+			/* 7) Remover la clase correspondiente */
+			habitacion.classList.remove("esconder")
+		}
+		</script>
+	</body>
+</html>

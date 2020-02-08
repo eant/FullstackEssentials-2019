@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/normalize.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/extra.css">
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="ejercicio_1.html">Ejercicio 1</a>
+				<a href="ejercicio_2.html">Ejercicio 2</a>
+				<a href="ejercicio_3.html">Ejercicio 3</a>
+				<a href="ejercicio_4.html" class="active">Ejercicio 4</a>
+				<a href="ejercicio_5.html">Ejercicio 5</a>
+				<a href="ejercicio_6.html">Ejercicio 6</a>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Calcular IVA</h1>
+			<input id="precio" type="number" placeholder="Colocar valor">
+			<button id="calcular">Calcular</button>
+			<p class="mensaje">El precio con IVA es de ar$<span class="total">0</span></p>
+		</section>
+
+		<aside>
+			<p>Ejecutar la función <code>calcularIVA</code> al tocar el boton.</p>
+			<p>Si el valor con IVA es mayor a ar$100.- asignar la clase "alerta" al mensaje.</p>
+			<p>Si es menor, remover la clase "alerta" del mensaje.</p>
+		</aside>
+
+		<script>
+			function calcularIVA(){
+				/* 1) Seleccionar el campo numérico y guardarlo en una variable */
+				var casilla = document.querySelector("#precio");
+
+				/* 2) Obtener el valor del campo */
+				var valor = casilla.value * 1.21;
+
+				/* 3) Escribir en el span el valor del campo + IVA */
+				document.querySelector(".total").innerText = valor;
+
+				/* 4) Si el valor con iva es superior a 100 asignar la clase "alerta" al mensaje, si es menor entonces quitarla */
+				if( valor > 100 ){
+					document.querySelector(".mensaje").classList.add("alerta")
+				} else {
+					document.querySelector(".mensaje").classList.remove("alerta")
+				}
+			}
+			/* 5) seleccionar el boton y guardarlo en una variable */
+			const btn = document.querySelector("#calcular");
+			/* 6) asignar al click del boton la funcion calcularIVA */
+			btn.onclick = calcularIVA;
+		</script>
+	</body>
+</html>

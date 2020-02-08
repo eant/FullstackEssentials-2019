@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/normalize.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/extra.css">
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="ejercicio_1.html">Ejercicio 1</a>
+				<a href="ejercicio_2.html">Ejercicio 2</a>
+				<a href="ejercicio_3.html" class="active">Ejercicio 3</a>
+				<a href="ejercicio_4.html">Ejercicio 4</a>
+				<a href="ejercicio_5.html">Ejercicio 5</a>
+				<a href="ejercicio_6.html">Ejercicio 6</a>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Calcular IVA</h1>
+			<input id="precio" type="number" placeholder="Colocar valor">
+			<p class="mensaje">El precio con IVA es de ar$<span class="total">0</span></p>
+		</section>
+
+		<aside>
+			<p>Si el valor con IVA es mayor a ar$100.- pintar de rojo el mensaje</p>
+			<p>Ejecutar la función utilizando la consola de desarrollador</p>
+		</aside>
+
+		<script>
+			function calcularIVA(){
+				/* 1) Seleccionar el campo numérico y guardarlo en una variable */
+				var casilla = document.querySelector("#precio");
+
+				/* 2) Obtener el valor del campo */
+				var valor = casilla.value * 1.21;
+
+				/* 3) Escribir en el span el valor del campo + IVA */
+				document.querySelector(".total").innerText = valor;
+
+				/* 4) Si el valor con IVA es superior a 100 modificar el estilo del mensaje */
+				if( valor > 100 ){
+
+					document.querySelector(".mensaje").style.color = "#F00"
+
+				}
+			}
+		</script>
+	</body>
+</html>

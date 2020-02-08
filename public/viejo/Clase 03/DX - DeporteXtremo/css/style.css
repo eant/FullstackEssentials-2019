@@ -1,0 +1,21 @@
+body {
+	color: #333333;
+	font-family: Arial;
+	font-size: 20px;
+	margin: 0; 
+}
+a {
+	color: #D9D9D9;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+}
+header {
+	background-color: #333333;
+	padding: 10px;
+}
+h1 {
+	margin: 0;
+	font-size: 32px;
+}
