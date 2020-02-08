@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Kiosko "El JeviScript"</title>
+		<link rel="stylesheet" href="https://docs.google.com/uc?id=17C6A6tYbFc9esDbgo0Q-HjN2rNjvXbyc">
+	</head>
+	<body>
+		<h1>Kiosko <strong>El JeviScript</strong></h1>
+
+		<button>Nuevo Producto +</button>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Stock</th>
+					<th>Precio</th>
+					<th>Disponible</th>
+				</tr>
+			</thead>
+			<tbody id="productos">
+				<!-- ACÁ TIENEN QUE APARECER LOS PRODUCTOS -->
+			</tbody>
+		</table>
+
+		<script>
+			/* Manipulación del DOM (Document Object Model) */
+			let titulo = document.querySelector("h1") //<-- Manipulacion Indirecta
+
+			//3) Manipulacion de Comportamiento
+			titulo.onclick = cambiarTitulo
+
+			document.querySelector("button").onclick = crearProducto //<-- Manipulacion Directa
+
+			function cambiarTitulo(){
+				//1) Manipulacion de Contenido
+				titulo.innerHTML = "Almacen el <u>TipoScript</u>"
+
+				//2) Manipulacion de Estructura
+				titulo.style.color = "red"
+				titulo.style.fontFamily = "Tahoma"
+				titulo.style.backgroundColor = "rgb(23,24,25)"
+
+				titulo.title = "El mejor precio en la Web"
+			}
+
+			function crearProducto(){
+				//debugger
+
+				//1) Introduccion
+				let nombre = prompt("Ingrese nombre:")
+				let stock = prompt("Ingrese stock:")
+				let precio = prompt("Ingrese precio:")
+				let disponible = confirm("Esta disponible?")
+
+				//2) Nudo
+				let precioFinal = precio * 1.21
+
+				//3) Desenlace
+				let fila = document.createElement("tr")
+
+				let celda1 = document.createElement("td")
+				let celda2 = document.createElement("td")
+				let celda3 = document.createElement("td")
+				let celda4 = document.createElement("td")
+
+				celda1.innerText = nombre
+				celda2.innerText = stock
+				celda3.innerText = precio
+				celda4.innerText = disponible
+
+				fila.appendChild(celda1)
+				fila.appendChild(celda2)
+				fila.appendChild(celda3)
+				fila.appendChild(celda4)
+				
+				console.log(fila)
+
+				document.querySelector("#productos").appendChild(fila)
+			}
+
+		</script>
+	</body>
+</html>

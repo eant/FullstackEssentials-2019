@@ -1,0 +1,200 @@
+* {
+	/*outline: dotted 1px red;*/
+}
+body {
+	font-family: Arial;
+	font-size: 14px;
+	color: #222;
+}
+img {
+	display: block;
+	width: 100%;
+}
+header {
+	background-color: #333;
+	padding: 10px;
+	overflow: hidden;
+}
+header h1 {
+	color: #FFF;
+	float: left;
+	font-size: 24px;
+	font-weight: 700;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: left center;
+	padding-left: 60px;
+	margin-top: 5px; 
+}
+nav {
+	float: right;
+}
+nav ul {
+	
+}
+nav li {
+	display: inline-block;
+}
+nav li a {
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+	padding: 10px;
+}
+nav li a:hover {
+	color: #333;
+	background-color: #FFF;
+}
+#noticias-destacadas img {
+	width: 100%;
+}
+#noticias-destacadas h2 {
+	background-color: #333;
+	color: #FFF;
+	font-weight: 700;
+	padding: 20px;
+	font-size: 48px;
+}
+.noticia {
+	display: flex;
+	flex-direction: row; /* row | column | row-reverse | column-reverse */
+	align-items: center; /* flex-start | center | flex-end */
+	justify-content: space-around; /* flex-start | center | flex-end | space-between |  */
+
+	border-bottom: solid 1px #DDD;
+	/*
+	- Version extendida:
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 20px;
+	margin-left: 20px;
+	
+	- Version simplificada (top/right/bottom/left)
+	margin: 0 20px 0 20px;
+	*/
+	margin: 0 20px; /* <- Version reducida (y/x) */
+
+	/* margin: 15px 20px 25px; <-- Version mixta (top/x/bottom) */
+
+}
+.noticia:last-child {
+	border: none;
+}
+
+.noticia-img {
+	width: 30%
+}
+.noticia-txt {
+	width: 65%;
+}
+.noticia-txt h3 {
+	font-size: 32px;
+	font-weight: 700;
+}
+.noticia-txt p {
+	font-size: 20px;
+}
+.noticia-txt p:nth-of-type(1) {
+	font-weight: 700;
+}
+.noticia-txt h3,
+.noticia-txt p {
+	line-height: 1.5;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+footer {
+	background-color: #333;
+	padding: 10px;
+	text-align: center;
+	color: #FFF;
+	font-size: 12px;
+	margin-top: 10px;
+}
+/*
+#tabla-posiciones table,
+#tabla-posiciones tr,
+#tabla-posiciones th,
+#tabla-posiciones td {
+	border: solid 1px #000;
+}
+*/
+#tabla-posiciones table {
+	margin: auto;
+	width: 60%;
+}
+
+#tabla-posiciones td,
+#tabla-posiciones th {
+	padding: 15px;
+}
+#tabla-posiciones th {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	font-weight: 700;
+	font-size: 24px;
+}
+#tabla-posiciones td {
+	background-color: #D9D9D9;
+	vertical-align: middle;
+}
+#tabla-posiciones tr {
+	border-bottom: solid 1px #A1A1A1;
+}
+#tabla-posiciones tr:last-child {
+	border: none;
+}
+#tabla-posiciones td:nth-of-type(odd){
+	font-weight: 700;
+	text-align: center;
+	font-size: 24px;
+}
+#tabla-posiciones td:nth-of-type(even) span {
+	font-weight: 700;
+	color: darkblue;
+}
+
+button {
+	display: none;
+}
+
+@media screen and (max-width: 767px){ /* <-- Hasta una tablet de 7' */
+	/* Reglas que aplican en pantallas de hasta 768px de ancho */
+	nav {
+		display: none;
+		float: none;
+		clear: both;
+	}
+	nav li {
+		display: block;
+		text-align: center;
+	}
+	.noticia {
+		flex-direction: column;
+	}
+	.noticia-img,
+	.noticia-txt {
+		width: 100%;
+	}
+	button {
+		display: block;
+		padding: 5px;
+		border: none;
+		background-color: transparent;
+		color: #FFF;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1;
+		float: right;
+	}
+	button:focus + nav {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 575px){ /* <-- Hasta un smartphone de 6' */
+/***************************/
+	
+/***************************/
+}

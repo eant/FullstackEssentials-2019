@@ -1,0 +1,23 @@
+<h1>Aprendiendo JavaScript</h1>
+<script>
+	//Se dice JavaScript
+	/* Se pronuncia JavaScript (o JeiEs) */
+
+	//1) Introduccion
+	let nombre = prompt("Ingrese nombre:")
+	let stock = prompt("Ingrese stock:")
+	let precio = prompt("Ingrese precio:")
+	let disponible = confirm("Esta disponible?")
+
+	//2) Nudo
+	let precioFinal = precio * 1.21
+
+	//alert( nombre )
+	//console.log( precio )
+	
+	//document.write("Hay " + stock + " unidades de " + nombre + " que valen $" + precio + " c/u")
+
+	//3) Desenlace
+	document.write(`<p>Hay ${stock} unidades de <strong>${nombre}</strong> que valen ARS ${precioFinal} c/u</p>`)
+
+</script>
