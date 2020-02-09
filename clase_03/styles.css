@@ -1,0 +1,129 @@
+body {
+  background-color: #f6f6f6;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: #0645ad;
+  background: none;
+}
+
+.container {
+  display: flex;
+}
+
+.header {
+  text-align: right;
+}
+
+.header__menu {
+  list-style-type: none;
+}
+
+.header__menu li {
+  display: inline;
+}
+
+.menu__container {
+  background-image: none;
+  margin-top: 1em;
+  margin: 0 0.6em 0 0.7em;
+  padding: 0.25em 0;
+  direction: ltr;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.menu__container__items {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menu__container__items li {
+  line-height: 1.125em;
+  margin: 0;
+  padding: 0.25em 0;
+  font-size: 0.75em;
+  word-wrap: break-word;
+}
+
+.wiki-logo {
+  width: 10em;
+  height: 160px;
+  display: block;
+  background: url("./img/eswiki-2x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 135px auto;
+  text-decoration: none;
+}
+
+.article {
+  background-color: white;
+  border-left: 1px solid #a7d7f9;
+  height: 100%;
+  padding: 20px;
+}
+
+.article__text {
+  line-height: 1.6;
+  font-size: 0.875em;
+  color: #222222;
+}
+
+.article__title h1 {
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.article__container {
+  display: flex;
+}
+
+.article__table {
+  border: 1px solid #b4bbc8;
+  background-color: #f9f9f9;
+  color: #000;
+  margin: 0.5em 0 0.7em 1.2em;
+  padding: 0.4em;
+  clear: right;
+  float: right;
+  font-size: 90%;
+  line-height: 1.5em;
+  width: 22.5em;
+}
+
+.article__table__header {
+  background-color: #dceaec !important;
+  color: black;
+  font-size: 140%;
+  font-weight: bolder;
+  height: 45px;
+  line-height: 1.2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.article__table__header.info {
+  background: url("./img/Picto-infoboxinfo.png") no-repeat top right;
+}
+
+.article__table__content {
+  text-align: center;
+}

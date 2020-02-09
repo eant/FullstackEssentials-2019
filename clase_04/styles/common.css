@@ -1,0 +1,26 @@
+body {
+  background-color: #f6f6f6;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: #0645ad;
+  background: none;
+}
